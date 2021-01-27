@@ -2,13 +2,22 @@
 <html>
     <head>
         <title>Steve Jobs - A tribute</title>
+        <!--button style prototype:
+                -->
         <style>
             :root {
                 min-height: 100%;
             }
             body {
-                background: radial-gradient(circle farthest-corner at 115% 10%, #77DD77 1%, transparent),
-                            radial-gradient(circle farthest-corner at 30% 100%, #CCA3F5 5%, #FF91AF);
+                background: radial-gradient(circle farthest-corner at 150% 10%, #57c557 1%, transparent),
+                            radial-gradient(circle farthest-corner at 30% 100%, #9557d3 5%, #32e0ff);
+            }
+            #main {
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                color: white;
+                margin: auto;
+                max-width: 1200px;
             }
             .glass {
                 background: rgba(255, 255, 255, 0.25);
@@ -21,12 +30,13 @@
                 flex-direction: column;
                 padding: 6px;
                 margin: 10px;
+                align-items: center;
             }
             .image-card {
                 display: flex;
                 box-sizing: border-box;
                 flex: 0.5;
-                padding: 15px;
+                padding: 8px;
                 margin: 10px;
             }
             img {
@@ -38,34 +48,217 @@
                 margin: 10px;
             }
             .title-card {
-                padding: 6px;
+                padding: 3px;
                 margin: 10px;
+                color: white;
+                letter-spacing: 35px;
+                text-transform: uppercase;
+                
             }
-            .middle {
+            .title-card h1 {
+                font-weight: 900;
+                font-size: 29px;
+            }
+            #intro-quote {
+                font-style: italic;
+                color:#9557d3;
+                font-size: 14px;
+                margin: 1px;
+            }
+            .bio-card p{
+                max-width: fit-content;
+                text-align: justify;
+                padding: 0px 35px;
+                margin: 6px 0px;
+            }
+            .bio-card p:nth-child(3) {
+                margin-top: 14px;
+            }
+            .bio-card p:last-child {
+                margin-bottom: 10px;
+            }
+            .bio-card h2 {
+                text-transform: uppercase;
+                letter-spacing: 6px;
+                margin: 8px;
+            }
+            #no-space {
+                letter-spacing: 0px;
+            }
+            .row {
                 display: flex;
                 flex-direction: row;
             }
-            #intro-caption {
-                stroke-width: 40%;
+            .column {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+            }
+            .text-card h2:first-of-type{
+                text-align: left;
+                text-transform: uppercase;
+                letter-spacing: 6px;
+                margin: 8px;
+            }
+            .text-card .button{
+                border-radius: 20px;
+                box-sizing: border-box;
+                width: fit-content;
+                height: fit-content;
+                align-self: center;
+                margin-bottom: 10px;
+                background: radial-gradient(circle farthest-corner at right, #939AEF 1%, transparent),             
+                            radial-gradient(circle farthest-corner at left, #61D99C 10%, #52B6E9);
+            }
+            #button-text {
+                text-transform: uppercase;
+                letter-spacing: 0px;
+            }
+            ul {
+                text-align: left;
+                list-style-type: none;
+                padding: 8px;
+                margin: 4px;
+            }
+            li {
+                margin: 6px;
             }
         </style>
     </head>
     <body>
-        <div class="glass title-card">
-            <h1>Placeholder Title</h1>
-        </div>
-        <div class="middle">
-            <div class="glass bio-card">
-                <h2>Placeholder Sub-Title</h2>
-                    <p id="intro-caption">caption placeholder</p>
-                <p>content placeholder</p>
-            </div> 
-            <div class="glass image-card">
-                <img src="stevejobs-alt.jpg">
+        <div id="main">
+            <div class="glass title-card">
+                <h1>
+                    steven paul jobs
+                </h1>
             </div>
-        </div>
-        <div class="glass text-card">
-            <p>placeholder</p>
+            <div class="row">
+                <div class="glass bio-card">
+                    <div class="bubble">
+                        <h2>
+                            Biograph<span id="no-space">y</span>
+                        </h2>
+                    </div>
+                    <p id="intro-quote">
+                        "Design is not just what it looks like and feels like. Design is how it works."
+                    </p>
+                    <p>
+                        Steven Paul Jobs or 'Steve Jobs' as he was better known was an American entrepeneur and a forefather to the modern technological and media indsutries. He was a prolific leader and investor with influence in the boardroom within Pixar as well as The Walt Disney Company when they eventually acquisitioned the former. However he was most notably known as the chairman, CEO and co-founder of 'Apple Inc.'. Alongside his partner Steve Wozniak Steve pioneered the 'personal computer revolution' of the 80's and 90's bringing to our doorstep the portable computer or 'PC' that we know and love today.
+                    </p>
+                    <p>
+                        Together the duo found their way into fame and fortune; building off of their success with Wozniak's 'Apple I' personal computer, when they released the incredibly ground breaking second generation. One of the first mass-produced microcomputers to achieve financial success. However this was only to be the first of many successes to come; with Jobs highlighting areas of potential within the tech sphere and working alongside his partner to harness the latent ability within them. Creating products with a focus on harnessing functionaly through intelligent design Apple grew into the tech powerhouse it is today. The same principles can be seen today in 'glassmorphism' in the UI space; a simple, minimalistic design that leads beautifully into the modern aesthetic we assosciate with new technology.
+                    </p>
+                </div> 
+                <div class="glass image-card">
+                    <img src="stevejobs-alt.jpg">
+                </div>
+            </div>
+            <div class="glass text-card row">
+                <div class="column">
+                    <h2>
+                        Timeline:
+                    </h2>
+                    <ul>
+                        <li>
+                            <b>1955 -</b> Born
+                        </li>
+                        <li>
+                            <b>1968 -</b> Summer Job with 'Hewlett-Packard'
+                        </li>
+                        <li>
+                            <b>1968 -</b> Attended 'Homestead High School' where he met Wozniak
+                        </li>
+                        <li>
+                            <b>1971 -</b> Attending AP classes at Stanford and selling a low-cost 'blue-box' alongside Wozniak
+                        </li>
+                        <li>
+                            <b>1972 -</b> Attended 'Reed College' for a semester before dropping out and continuing to attend by auditing his classes
+                        </li>
+                        <li>
+                            <b>1974 -</b> Hired by 'Atari Inc.' as a technician
+                        </li>
+                        <li>
+                            <b>1974 -</b> Left to India in pursuit of enlightenment and became a practitioner of 'Zen Buddhism'
+                        </li>
+                        <li>
+                            <b>1975 -</b> Attended meetings of the 'Homebrew Computer Club'
+                        </li>
+                        <li>
+                            <b>1976 -</b> Jobs suggests to Wozniak that they sell his 'Apple I' computer
+                        </li>
+                        <li>
+                            <b>1976 -</b> 'Apple Computer Company' is founded out of Job's garage
+                        </li>
+                        <li>
+                            <b>1977 -</b> Jobs and Wozniak present the 'Apple II' at the 'West Coast Computer Faire'
+                        </li>
+                        <li>
+                            <b>1978 -</b> Jobs is worth over $1 million
+                        </li>
+                        <li>
+                            <b>1980 -</b> Jobs is worth over $250 million
+                        </li>
+                        <li>
+                            <b>1981 -</b> Jobs began directing the development of the 'Macintosh'
+                        </li>
+                        <li>
+                            <b>1984 -</b> Jobs introduces 'Macintosh' to the world
+                        </li>
+                        <li>
+                            <b>1985 -</b> Jobs resigns from 'Apple' due to the 'Macintosh's' inability to outcompete with and founds 'NeXT Inc.'
+                        </li>
+                        <li>
+                            <b>1990 -</b> 'NeXT workstations' first released
+                        </li>
+                        <li>
+                            <b>1990 -</b> Revised second generation 'NeXTcube' released
+                        </li>
+                        <li>
+                            <b>1993 -</b> 'NeXT' transitions into software development with 'NeXTSTEP/Intel'
+                        </li>
+                        <li>
+                            <b>1996 -</b> 'NeXT' releases 'WebObjects' a framework for web application development that was eventually used for the construction and running of the 'Apple Store' and 'iTunes Store'
+                        </li>
+                        <li>
+                            <b>1997 -</b> 'NeXT' acquired by 'Apple Inc.' for $427 million
+                        </li>
+                        <li>
+                            <b>2000 -</b> Jobs becomes CEO of Apple and begins branching out in terms of the technological avenues that 'Apple Inc.' develops within
+                        </li>
+                        <li>
+                            <b>2003 -</b> Jobs is diagnosed with pancreatic cancer
+                        </li>
+                        <li>
+                            <b>2004 -</b> Tumor is removed
+                        </li>
+                        <li>
+                            <b>2006 -</b> Jobs delivers keynote for Apple's 'Worldwide Developer's Conference' he is described as 'gaunt. Only his wife and doctor know the cancer has returned
+                        </li>
+                        <li>
+                            <b>2007 -</b> Apple releases the 'iPhone'
+                        </li>
+                        <li>
+                            <b>2008 -</b> Following Job's keynote address similar concerns are aired
+                        </li>
+                        <li>
+                            <b>2009 -</b> Jobs unergoes a liver transplant
+                        </li>
+                        <li>
+                            <b>2011 -</b> Jobs resigns from Apple though he is still involved in marketing releases such as the 'Ipad 2'
+                        </li>
+                        <li>
+                            <b>2011 -</b> Steve Jobs passes away from complications originating from his relapse that result in respiratory arrest
+                        </li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <div class="button">
+                        <h2 id="button-text">
+                            Glassmorphism
+                        </h2>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>
