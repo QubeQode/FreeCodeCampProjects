@@ -93,26 +93,38 @@
                 display: flex;
                 flex-direction: column;
                 flex: 1;
+                align-content: center;
             }
-            .text-card h2:first-of-type{
+            #sub-title {
                 text-align: left;
                 text-transform: uppercase;
                 letter-spacing: 6px;
                 margin: 8px;
             }
-            .text-card .button{
+            .button {
                 border-radius: 20px;
                 box-sizing: border-box;
-                width: fit-content;
-                height: fit-content;
-                align-self: center;
-                margin-bottom: 10px;
+                display: flex;
+                flex-direction: row;
+                margin: 0px;
                 background: radial-gradient(circle farthest-corner at right, #939AEF 1%, transparent),             
                             radial-gradient(circle farthest-corner at left, #61D99C 10%, #52B6E9);
+            }
+            .drop-box {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                margin: 0px;
+                box-sizing: border-box;
+                
             }
             #button-text {
                 text-transform: uppercase;
                 letter-spacing: 0px;
+                padding: 4px;
+                margin-top: 1px;
+                margin-bottom: 1px;
             }
             ul {
                 text-align: left;
@@ -155,7 +167,7 @@
             </div>
             <div class="glass text-card row">
                 <div class="column">
-                    <h2>
+                    <h2 id="sub-title">
                         Timeline:
                     </h2>
                     <ul>
@@ -252,10 +264,12 @@
                     </ul>
                 </div>
                 <div class="column">
-                    <div class="button">
-                        <h2 id="button-text">
-                            Glassmorphism
-                        </h2>
+                    <div class="drop-box">
+                        <div class="button">
+                            <h2 id="button-text">
+                                Glassmorphism
+                            </h2>
+                        </div>
                     </div>
                 </div>
             </div>
