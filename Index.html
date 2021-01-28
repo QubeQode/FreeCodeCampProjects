@@ -2,8 +2,6 @@
 <html>
     <head>
         <title>Steve Jobs - A tribute</title>
-        <!--button style prototype:
-                -->
         <style>
             :root {
                 min-height: 100%;
@@ -32,16 +30,26 @@
                 margin: 10px;
                 align-items: center;
             }
-            .image-card {
+            #img-div {
                 display: flex;
+                flex-direction: column;
                 box-sizing: border-box;
+                justify-items: center;
+                align-items: center;
                 flex: 0.5;
                 padding: 8px;
                 margin: 10px;
             }
-            img {
+            #image {
                 max-width: 100%;
+                height: auto;
                 border-radius: 25px;
+            }
+            #img-caption {
+                color: white;
+                font-size: 16px;
+                margin: 8px;
+                margin-top: 12px;
             }
             .text-card {
                 padding: 6px;
@@ -55,7 +63,7 @@
                 text-transform: uppercase;
                 
             }
-            .title-card h1 {
+            #title {
                 font-weight: 900;
                 font-size: 29px;
             }
@@ -65,7 +73,7 @@
                 font-size: 14px;
                 margin: 1px;
             }
-            .bio-card p{
+            .bio-card #tribute-info{
                 max-width: fit-content;
                 text-align: justify;
                 padding: 0px 35px;
@@ -96,6 +104,12 @@
                 flex: 1;
                 align-content: center;
             }
+            .sub-column {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                flex: 1;
+            }
             #sub-title {
                 text-align: left;
                 text-transform: uppercase;
@@ -108,14 +122,15 @@
                 display: flex;
                 flex-direction: row;
                 margin: 2px;
-                background: radial-gradient(circle farthest-corner at right, #939AEF 1%, transparent),             
-                            radial-gradient(circle farthest-corner at left, #61D99C 10%, #52B6E9);
+                background: radial-gradient(circle farthest-corner at right, #55Bf91 1%, transparent),             
+                            radial-gradient(circle farthest-corner at left, #58B7A2 10%, #57BB98);
             }
             .drop-box {
                 display: flex;
                 flex-direction: column;
+                flex: content;
                 align-items: center;
-                margin: 0px;
+                margin: 0px 0px 10px 0px;
                 box-sizing: border-box;
                 max-height: 100%;
                 background: rgba(255, 255, 255, 0);
@@ -125,9 +140,12 @@
             }
             .drop-box p{
                 font-size: 16px;
-                padding: 15px 20px 15px 20px;
+                padding: 15px 18px 18px 15px;
                 margin: 0px;
                 text-align: justify;
+            }
+            .drop-box p:last-of-type {
+                padding-bottom: 15px;
             }
             .drop-box:hover {
                 animation-name: drop-box;
@@ -146,6 +164,42 @@
                     border: 2px solid rgba(255, 255, 255, 0.1);
                     color:rgba(255, 255, 255, 1)
                 }
+            }
+            #tribute-link {
+                display: flex;
+                justify-content: center;
+                align-self: flex-end;
+                box-sizing: border-box;
+                background: radial-gradient(circle farthest-corner at right, #689EB8, transparent), radial-gradient(circle farthest-corner at left,#7B80BC 10%,#7190BA);
+                color:rgba(255, 255, 255, 1);
+                border-radius: 25px;
+                border: 2px solid rgba(255, 255, 255, 0);
+                background-clip: content-box;
+            }
+            #tribute-link:active {
+                animation-name: drop-box-2;
+                animation-duration: 100ms;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;                  
+            }
+            @keyframes drop-box-2 {
+                0% {
+                    background: rgba(255, 255, 255, 0.5);
+                    border: 2px solid rgba(255, 255, 255, 0.3);
+                }
+                100% {
+                    background: rgba(255, 255, 255, 0.25);
+                    border: 2px solid rgba(255, 255, 255, 0.1);
+                }
+            }
+            a {
+                text-decoration: none;
+            }
+            #tribute-link p {
+                font-size: 16px;
+                padding: 15px 20px 15px 20px;
+                margin: 0px;
+                text-align: justify;
             }
             #button-text {
                 text-transform: uppercase;
@@ -170,29 +224,36 @@
     <body>
         <div id="main">
             <div class="glass title-card">
-                <h1>
+                <h1 id="title">
                     steven paul jobs
                 </h1>
             </div>
             <div class="row">
                 <div class="glass bio-card">
-                    <div class="bubble">
-                        <h2>
-                            Biograph<span id="no-space">y</span>
-                        </h2>
-                    </div>
+                    <h2>
+                        Biography
+                    </h2>
                     <p id="intro-quote">
                         "Design is not just what it looks like and feels like. Design is how it works."
                     </p>
-                    <p>
-                        Steven Paul Jobs or 'Steve Jobs' as he was better known was an American entrepeneur and a forefather to the modern technological and media indsutries. He was a prolific leader and investor with influence in the boardroom within Pixar as well as The Walt Disney Company when they eventually acquisitioned the former. However he was most notably known as the chairman, CEO and co-founder of 'Apple Inc.'. Alongside his partner Steve Wozniak Steve pioneered the 'personal computer revolution' of the 80's and 90's bringing to our doorstep the portable computer or 'PC' that we know and love today.
-                    </p>
-                    <p>
-                        Together the duo found their way into fame and fortune; building off of their success with Wozniak's 'Apple I' personal computer, when they released the incredibly ground breaking second generation. One of the first mass-produced microcomputers to achieve financial success. However this was only to be the first of many successes to come; with Jobs highlighting areas of potential within the tech sphere and working alongside his partner to harness the latent ability within them. Creating products with a focus on harnessing functionaly through intelligent design Apple grew into the tech powerhouse it is today. The same principles can be seen today in 'glassmorphism' in the UI space; a simple, minimalistic design that leads beautifully into the modern aesthetic we assosciate with new technology.
-                    </p>
+                    <div id="tribute-info">
+                        <p>
+                            Steven Paul Jobs or 'Steve Jobs' as he was better known was an American entrepeneur and a forefather to the modern technological and media indsutries. He was a prolific leader and investor with influence in the boardroom within Pixar as well as The Walt Disney Company when they eventually acquisitioned the former. However he was most notably known as the chairman, CEO and co-founder of 'Apple Inc.'. Alongside his partner Steve Wozniak Steve pioneered the 'personal computer revolution' of the 80's and 90's bringing to our doorstep the portable computer or 'PC' that we know and love today.
+                        </p>
+                        <p>
+                            Together the duo found their way into fame and fortune; building off of their success with Wozniak's 'Apple I' personal computer, when they released the incredibly ground breaking second generation. One of the first mass-produced microcomputers to achieve financial success. However this was only to be the first of many successes to come; with Jobs highlighting areas of potential within the tech sphere and working alongside his partner to harness the latent ability within them. Creating products with a focus on harnessing functionaly through intelligent design Apple grew into the tech powerhouse it is today. The same principles can be seen today in 'glassmorphism' in the UI space; a simple, minimalistic design that leads beautifully into the modern aesthetic we assosciate with new technology.
+                        </p>
+                    </div>
                 </div> 
-                <div class="glass image-card">
-                    <img src="stevejobs-alt.jpg">
+                <div class="glass" id="img-div">
+                    <img id="image" src="stevejobs-alt.jpg" alt="Steve Jobs in his classic pose">
+                    <figcaption id="img-caption">
+                        <em>
+                            <i>
+                                Steve Jobs in his classic pose
+                            </i>
+                        </em>
+                    </figcaption>
                 </div>
             </div>
             <div class="glass text-card row">
@@ -304,11 +365,20 @@
                             It is clear from a simple timeline of Steve Job's life that he personally guided the economic and industrial spheres of technology into the consumer industry that it is today. Although the argument could be made that technology was always destined to hold great importance in our society; a direct result of its incredible utilitarian function, it cannot be argued that without Job's influence the way it would have manifested would be entirely diffferent. One of the most tangible results of this influence is in the standards that today's UI/UX best practices revolve around; with a focus on simple, interactive functionality.
                         </p>
                         <p>
-                            Not only does this directly mirror Jobs' own philosophy when it came to technology; he himself prioritizing ergonomics as much as he did aesthetics, a lot of the output is based on work he headed. Glassmorphism is a key example of this in that it is a direct derivative from Apple's approach to UI. The frosted glass effect has a modern, visual appeal in how unique its opacity's intercation is with the background behind it. It allows the front-end developer to break some of the cardinal rules of background design as it actually leans into a display of bright colors. Furthermore the simple, sparse 'card' organization forces the front-end developer to organize their information in a minimalist, cohesive fashion. 
+                            Not only does this directly mirror Jobs' own philosophy when it comes to technology; he himself prioritizing ergonomics as much as he did aesthetics, a lot UI's design output is based on work he headed. Glassmorphism is a key example of this in that it is a direct derivative from Apple's approach to UI. The frosted glass effect has a modern, visual appeal in how unique its opacity's intercation is with the background behind it. It allows the front-end developer to break some of the cardinal rules of background design as it actually leans into a display of bright colors. Furthermore the simple, sparse 'card' organization forces the front-end developer to organize their information in a minimalist, cohesive fashion. 
                         </p>
                         <p>
                             As is always the case in the UI community the design has permeated beyond Apple products with programmers keen to solve the mysteries behind the unique visual display. And by the same merit 'glassmorphism' is destined to be overused and to grow boring for the user. However I can say with marked confidence that the next trend to take its place in the limelight will stringently follow Jobs' tenents of simplicity in both function and aesthetics.
                         </p>
+                    </div>
+                    <div class="sub-column">
+                        <a id="tribute-link" href="https://en.wikipedia.org/wiki/Steve_Jobs" target="_blank">
+                            <div>
+                                <p>
+                                    For more information on Steve Jobs click this button
+                                </p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
