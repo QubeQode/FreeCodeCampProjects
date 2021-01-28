@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            html {
+                height: 100%;
+                width:100%;
+            }
+            body {
+                min-height:100%;
+                width: 100%;
+                background: black;
+            }
+            div {
+                width: 100px;
+                height: 100px;
+                background-color: rgba(255, 255, 255, 0);
+                display: flex;
+                justify-content: center;
+            }
+            #button-text {
+                text-align: center;
+                color:rgba(255, 255, 255, 1);
+                margin-right: 10px;
+            }
+            #dynamic-box {
+                background-color: black;
+                color: rgba(255, 255, 255, 0);
+                width: 70%;
+                height: 100%;
+                margin: 0px;
+                position: relative;
+                border: 2px solid rgba(255, 255, 255, 0);
+            }
+            #dynamic-box:active {
+                animation-name: drop-box;
+                animation-duration: 250ms;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+                background: rgba(255, 255, 255, 0.25);
+                border-radius: 25px;
+                border: 2px solid rgba(255, 255, 255, 0.1);
+            }
+            @keyframes drop-box {
+                0% {
+                    background: rgba(255, 255, 255, 0);
+                    border: 2px solid rgba(255, 255, 255, 0);
+                    color:rgba(255, 255, 255, 0)
+                }
+                100% {
+                    background: rgba(255, 255, 255, 0.25);
+                    border: 2px solid rgba(255, 255, 255, 0.1);
+                    color:rgba(255, 255, 255, 1)
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="dynamic-box">
+            <div>
+                <h2 id="button-text">BEE JESUS</h2>
+            </div>
+            <p>
+                I'm baby leggings selvage chicharrones paleo keytar subway tile succulents meditation. Chambray fam pop-up organic knausgaard. Pitchfork green juice succulents yr jean shorts bitters, yuccie forage disrupt. Mumblecore before they sold out +1 freegan brooklyn kombucha yr tousled enamel pin migas succulents plaid. Raw denim pinterest deep v aesthetic live-edge taxidermy, iPhone mlkshk bitters distillery godard hell of echo park 3 wolf moon. Butcher beard vinyl copper mug shaman pitchfork, cold-pressed cronut typewriter poutine 8-bit.
+
+                Chambray wayfarers irony occupy gluten-free single-origin coffee, mixtape mustache lomo photo booth copper mug selvage polaroid farm-to-table. Meh mlkshk keffiyeh, brunch affogato vinyl DIY 90's PBR&B four loko plaid venmo organic. Humblebrag hexagon mumblecore echo park fanny pack. Mixtape iceland small batch hell of snackwave man braid narwhal keffiyeh artisan kinfolk. Gastropub hashtag cred synth, copper mug selfies scenester.
+                
+                Viral taiyaki poke plaid prism etsy twee mumblecore raw denim green juice fixie cronut hashtag forage. Gentrify try-hard live-edge intelligentsia activated charcoal street art plaid lumbersexual sustainable venmo authentic roof party hell of. Tbh artisan narwhal vape squid adaptogen banh mi freegan salvia woke kombucha man braid. Vaporware street art hoodie, mixtape single-origin coffee man bun brunch yr hot chicken.
+                
+                Pitchfork mixtape fam lumbersexual scenester bicycle rights. Mustache squid retro sriracha raclette lyft readymade kitsch, locavore fam PBR&B aesthetic asymmetrical pabst fixie. Bitters butcher pour-over messenger bag church-key synth. Disrupt pickled literally readymade. Affogato raw denim yr humblebrag try-hard cliche retro.
+                
+                Food truck pop-up ramps art party jean shorts succulents green juice stumptown raclette brunch. Banjo shaman unicorn hexagon prism, glossier tacos pinterest iPhone. Ugh umami meditation, fam post-ironic church-key taxidermy poke artisan air plant. Leggings single-origin coffee gastropub pug cardigan gentrify. +1 flannel ennui meditation vice pok pok locavore cray crucifix. Af butcher 8-bit, copper mug lyft fixie tote bag poke.
+                
+                Dummy text? More like dummy thicc text, amirite?
+            </p>
+        </div>
+    </body>
+</html>
