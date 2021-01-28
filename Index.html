@@ -70,6 +70,7 @@
                 text-align: justify;
                 padding: 0px 35px;
                 margin: 6px 0px;
+                font-size: 16px;
             }
             .bio-card p:nth-child(3) {
                 margin-top: 14px;
@@ -106,18 +107,45 @@
                 box-sizing: border-box;
                 display: flex;
                 flex-direction: row;
-                margin: 0px;
+                margin: 2px;
                 background: radial-gradient(circle farthest-corner at right, #939AEF 1%, transparent),             
                             radial-gradient(circle farthest-corner at left, #61D99C 10%, #52B6E9);
             }
             .drop-box {
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
                 align-items: center;
-                justify-content: center;
                 margin: 0px;
                 box-sizing: border-box;
-                
+                max-height: 100%;
+                background: rgba(255, 255, 255, 0);
+                border-radius: 25px;
+                border: 2px solid rgba(255, 255, 255, 0);
+                color:rgba(255, 255, 255, 0)
+            }
+            .drop-box p{
+                font-size: 16px;
+                padding: 15px 20px 15px 20px;
+                margin: 0px;
+                text-align: justify;
+            }
+            .drop-box:hover {
+                animation-name: drop-box;
+                animation-duration: 500ms;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+            }
+            @keyframes drop-box {
+                0% {
+                    background: rgba(255, 255, 255, 0);
+                    border: 2px solid rgba(255, 255, 255, 0);
+                    color:rgba(255, 255, 255, 0)
+                }
+                100% {
+                    background: rgba(255, 255, 255, 0.25);
+                    border: 2px solid rgba(255, 255, 255, 0.1);
+                    color:rgba(255, 255, 255, 1)
+                }
             }
             #button-text {
                 text-transform: uppercase;
@@ -125,12 +153,14 @@
                 padding: 4px;
                 margin-top: 1px;
                 margin-bottom: 1px;
+                color: rgba(255, 255, 255, 1);
             }
             ul {
                 text-align: left;
                 list-style-type: none;
                 padding: 8px;
                 margin: 4px;
+                font-size: 16px;
             }
             li {
                 margin: 6px;
@@ -270,6 +300,15 @@
                                 Glassmorphism
                             </h2>
                         </div>
+                        <p>
+                            It is clear from a simple timeline of Steve Job's life that he personally guided the economic and industrial spheres of technology into the consumer industry that it is today. Although the argument could be made that technology was always destined to hold great importance in our society; a direct result of its incredible utilitarian function, it cannot be argued that without Job's influence the way it would have manifested would be entirely diffferent. One of the most tangible results of this influence is in the standards that today's UI/UX best practices revolve around; with a focus on simple, interactive functionality.
+                        </p>
+                        <p>
+                            Not only does this directly mirror Jobs' own philosophy when it came to technology; he himself prioritizing ergonomics as much as he did aesthetics, a lot of the output is based on work he headed. Glassmorphism is a key example of this in that it is a direct derivative from Apple's approach to UI. The frosted glass effect has a modern, visual appeal in how unique its opacity's intercation is with the background behind it. It allows the front-end developer to break some of the cardinal rules of background design as it actually leans into a display of bright colors. Furthermore the simple, sparse 'card' organization forces the front-end developer to organize their information in a minimalist, cohesive fashion. 
+                        </p>
+                        <p>
+                            As is always the case in the UI community the design has permeated beyond Apple products with programmers keen to solve the mysteries behind the unique visual display. And by the same merit 'glassmorphism' is destined to be overused and to grow boring for the user. However I can say with marked confidence that the next trend to take its place in the limelight will stringently follow Jobs' tenents of simplicity in both function and aesthetics.
+                        </p>
                     </div>
                 </div>
             </div>
