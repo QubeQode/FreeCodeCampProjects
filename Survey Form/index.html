@@ -61,6 +61,10 @@
                 display: flex;
                 flex-direction: column;
             }
+            form {
+                display: flex;
+                flex-direction: column;
+            }
             #title {
                 font-size: 36px;
                 padding: 0px;
@@ -78,13 +82,8 @@
                 margin: 10px;
                 flex: 1;
             }
-            select {
-                background-color: transparent;
-                border: 1px solid rgba(255, 255, 255, 0.025);
-                box-shadow: inset -0.5px -0.5px 1px 0 rgba(255, 255, 255, 0.73), inset 2.5px 2.5px 7px 0 rgba(217, 210, 200, 0.71); 
-                border-radius: 18px;
-                margin: 10px;
-                flex: 1;
+            .neu-txt:focus {
+                outline: none;
             }
             .rad-container {
                 display: flex;
@@ -117,11 +116,28 @@
                 box-shadow: 1.5px 2px 4px 0 rgba(255, 255, 255, 0.43), 1px 1px 4px 0 rgba(255, 255, 255, 0.13),  inset 1px 0.5px 7px 0 rgba(217, 210, 200, 0.71), inset -1px -1px 2px rgba(255, 255, 255, 0.85);
                 transition-duration: 100ms;
             }
+            select {
+                background-color: transparent;
+                border: 1px solid rgba(255, 255, 255, 0.025);
+                box-shadow: inset -0.5px -0.5px 1px 0 rgba(255, 255, 255, 0.73), inset 2.5px 2.5px 7px 0 rgba(217, 210, 200, 0.71); 
+                border-radius: 18px;
+                margin: 10px;
+                flex: 1;
+                color: rgba(0, 0, 0, 0.55);
+                font-size: 16px;
+            }
+            select:focus {
+                outline: none;
+            }
+            option[value=""] {
+                display: none;
+            }
             .check-container {
                 display: flex;
                 flex-direction: row;
                 flex: 1;
                 align-items: center;
+                justify-content: flex-start;
             }
             .check-container input[type=checkbox] {
                 opacity: 0;
@@ -136,6 +152,7 @@
                 border-radius: 5%;
                 padding: 12px;
                 margin: 5px;
+                position: static;
             }
             .check-container:hover input ~ .neu-check {
                 box-shadow: -1.5px -1.5px 3px 0 rgba(217, 210, 200, 0.71), 1px 1px 4px 0  rgba(255, 255, 255, 0.93);
@@ -154,6 +171,9 @@
                 resize: none;
                 flex: 1;
             }
+            textarea:focus {
+                outline: none;
+            }
             button {
                 flex: 1;
                 background-color: transparent;
@@ -163,8 +183,18 @@
                 margin: 10px;
                 color:rgba(0, 0, 0, 0.55);
             }
+            button:hover {
+                box-shadow: -1.5px -1.5px 3px 0 rgba(217, 210, 200, 0.71), 2.5px 2.5px 4px 0  rgba(255, 255, 255, 0.93);
+                transition-duration: 500ms;
+            }
+            button:focus {
+                box-shadow: -1.5px -1.5px 3px 0 rgba(217, 210, 200, 0.73), 2.5px 2.5px 4px 0 rgba(255, 255, 255, 0.13),  inset 1px 0.5px 7px 0 rgba(217, 210, 200, 0.71), inset -3px -3px 5px rgba(255, 255, 255, 0.71);
+                transition-duration: 100ms;
+                outline: none;
+            }
         </style>
     </head>
+
     <body>
         <div class="height-wrapper">
             <div class="width-wrapper">
@@ -174,61 +204,104 @@
                     </h1>
                     <div class="content-height">
                         <div class="content-width">
-                            <input type="text" class="neu-txt" style="margin-top: 2px;">
-                            <input type="text" class="neu-txt">
-                            <input type="text" class="neu-txt">
-                            <select>             
-                            </select>
-                            <label class="rad-container">
-                                <input type="radio" checked="checked" name="radio">
-                                <span class="neu-icon"></span>
-                                RadioX
-                            </label>
-                            <label class="rad-container">
-                                <input type="radio" name="radio">
-                                <span class="neu-icon"></span>
-                                RadioY
-                            </label>
-                            <label class="rad-container">
-                                <input type="radio" name="radio">
-                                <span class="neu-icon"></span>
-                                RadioZ
-                            </label>
-                            <select>
-                            </select>
-                            <label class="check-container">
-                                <input type="checkbox" name="check">
-                                <span class="neu-check"></span>
-                                CheckX
-                            </label>
-                            <label class="check-container">
-                                <input type="checkbox" name="check">
-                                <span class="neu-check"></span>
-                                CheckY
-                            </label>
-                            <label class="check-container">
-                                <input type="checkbox" name="check">
-                                <span class="neu-check"></span>
-                                CheckZ
-                            </label>
-                            <label class="check-container">
-                                <input type="checkbox" name="check">
-                                <span class="neu-check"></span>
-                                CheckA
-                            </label>  
-                            <label class="check-container">
-                                <input type="checkbox" name="check">
-                                <span class="neu-check"></span>
-                                CheckB
-                            </label>
-                            <label class="check-container">
-                                <input type="checkbox" name="check">
-                                <span class="neu-check"></span>
-                                CheckC
-                            </label>       
-                            <textarea>
-                            </textarea>
-                            <button type="button">Submit</button>
+                            <form>
+                                <label for="name">
+                                    Name:
+                                <input type="text" name="name" class="neu-txt" style="margin-top: 2px;" placeholder="Enter your name" required>
+                                </label>
+                                <label for="email">
+                                    Email:
+                                    <input type="text" name="email" class="neu-txt" placeholder="Enter your Email" required>
+                                </label>
+                                <label for="age">
+                                    Age: <span style="font-size: 12px;">(Optional)</span>
+                                    <input type="number" name="age" class="neu-txt" placeholder="Age">
+                                </label>
+                                <label for="employment-select">Which option best describes you?</label>
+                                <select name="employment" id="employment-select" required>
+                                    <option value="" disabled selected>--Please choose an option--</option>
+                                    <option value="student">Student</option>
+                                    <option value="employer">Employer</option>
+                                    <option value="full-time">Full-time Job</option>
+                                    <option value="incognito">Prefer not to say</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <label>
+                                    Would you use this design format on your own website?
+                                    <label class="rad-container">
+                                        <input type="radio" name="radio">
+                                        <span class="neu-icon"></span>
+                                        Yes
+                                    </label>
+                                    <label class="rad-container">
+                                        <input type="radio" name="radio">
+                                        <span class="neu-icon"></span>
+                                        Circumstantially
+                                    </label>
+                                    <label class="rad-container">
+                                        <input type="radio" checked="checked" name="radio">
+                                        <span class="neu-icon"></span>
+                                        On certain elements
+                                    </label>
+                                    <label class="rad-container">
+                                        <input type="radio" name="radio">
+                                        <span class="neu-icon"></span>
+                                        No
+                                    </label>
+                                    <label class="rad-container">
+                                        <input type="radio" name="radio">
+                                        <span class="neu-icon"></span>
+                                        Other
+                                    </label>
+                                </label>
+                                <label for="fave-feature">What design feature is your favourite?</label>
+                                <select name="fave-feature" id="fave-select">
+                                    <option value="" disabled selected>--Please choose an option--</option>
+                                    <option value="display-card">Display Card</option>
+                                    <option value="text-box">Text Box</option>
+                                    <option value="select-list">Select List</option>
+                                    <option value="radial-list">Radial List</option>
+                                    <option value="check-list">Checkbox List</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <label>
+                                    Which of the following drawbacks applies to the design on this form?<span style="font-size: 13px;">(Check all that apply)</span>
+                                    <label class="check-container">
+                                        <input type="checkbox" name="check">
+                                        <span class="neu-check"></span>
+                                        Not enough color variation in the design
+                                    </label>
+                                    <label class="check-container">
+                                        <input type="checkbox" name="check">
+                                        <span class="neu-check"></span>
+                                        Inacessible to color blind or visually impaired users
+                                    </label>
+                                    <label class="check-container">
+                                        <input type="checkbox" name="check">
+                                        <span class="neu-check"></span>
+                                        Interactive elements are difficult to differentiate and discern in their various states (inactive, hover and active/focus)
+                                    </label>
+                                    <label class="check-container">
+                                        <input type="checkbox" name="check">
+                                        <span class="neu-check"></span>
+                                        Design template is too specific for any kind of branding
+                                    </label>  
+                                    <label class="check-container">
+                                        <input type="checkbox" name="check">
+                                        <span class="neu-check"></span>
+                                        Element shading and lighting takes up too much design space
+                                    </label>
+                                    <label class="check-container">
+                                        <input type="checkbox" name="check">
+                                        <span class="neu-check"></span>
+                                        Minimalist design limits how much content can be placed on the webpage
+                                    </label>
+                                </label>
+                                <label for="additional-thoughts">
+                                    Additional Thoughts:
+                                    <textarea name="additonal-thoughts" placeholder="Enter your comments here..."></textarea>
+                                <button type="submit">Submit</button>
+                            </form>
                         </div>
                     </div>
                 </div>
