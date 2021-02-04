@@ -103,33 +103,60 @@
                 outline: none;
             }
             .rad-container {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
+                display: block;
+                position: relative;
+                padding-left: 35px;
+                margin-bottom: 12px;
+                cursor: pointer;
                 font-size: 13px;
                 font-weight: normal;
+                line-height: 25px;
             }
-            .rad-container input[type=radio] {
+            .rad-container input {
+                position: absolute;
                 opacity: 0;
-                width: 0;
+                cursor: pointer;
                 height: 0;
-                margin: 0;
+                width: 0;
             }
             .neu-icon {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 25px;
+                width: 25px;
                 background-color: transparent;
                 border: 1px solid rgba(255, 255, 255, 0.025);
                 box-shadow: -1px -1px 4px 0 rgba(255, 255, 255, 0.93), 2.5px 2.5px 3px 0 rgba(217, 210, 200, 0.71);  
                 border-radius: 50%;
-                padding: 12px;
-                margin: 5px;
             }
             .rad-container:hover input ~ .neu-icon {
                 box-shadow: -1.5px -1.5px 3px 0 rgba(217, 210, 200, 0.71), 1px 1px 4px 0  rgba(255, 255, 255, 0.93);
-                transition-duration: 500ms;
-            } 
+                transition-duration: 350ms;
+            }
             .rad-container input:checked ~ .neu-icon {
                 box-shadow: 1.5px 2px 4px 0 rgba(255, 255, 255, 0.43), 1px 1px 4px 0 rgba(255, 255, 255, 0.13),  inset 1px 0.5px 7px 0 rgba(217, 210, 200, 0.71), inset -1px -1px 2px rgba(255, 255, 255, 0.85);
-                transition-duration: 100ms;
+                transition-duration: 350ms;
+                height: 26px;
+                width: 26px;
+            }
+            .neu-icon:after {
+                content: "";
+                position: absolute;
+                display: none; 
+            }
+            .rad-container input:checked ~ .neu-icon:after {
+                display: block;
+                transition: 350ms;
+            }
+            .rad-container .neu-icon:after {
+                left: 8px;
+                bottom: 7.25px;
+                background-color: var(--off-white);
+                height: 10px;
+                width: 10px;
+                box-shadow: 1.5px 1.5px 2px 0 rgba(255, 255, 255, 0.13), -1.5px -1.5px 2px 0 rgba(255, 255, 255, 0.63);
+                border-radius: 50%;
             }
             select {
                 background-color: transparent;
@@ -193,11 +220,11 @@
                 transition: 350ms;
             }
             .check-container .neu-check:after {
-                left: 6.5px;
-                bottom: 5.5px;
+                left: 8px;
+                bottom: 6.5px;
                 background-color: var(--off-white);
-                height: 13px;
-                width: 13px;
+                height: 10px;
+                width: 10px;
                 box-shadow: 1.5px 1.5px 2px 0 rgba(255, 255, 255, 0.13), -1.5px -1.5px 2px 0 rgba(255, 255, 255, 0.63);
             }
             textarea {
@@ -255,7 +282,7 @@
                                     <input type="text" name="email" class="neu-txt" placeholder="Enter your Email" required>
                                 </label>
                                 <label for="age">
-                                    Age: <span style="font-size: 12px;">(Optional)</span>
+                                    Age: <span style="font-size: 14px;font-weight: normal;">(Optional)</span>
                                     <input type="number" name="age" class="neu-txt" placeholder="Age">
                                 </label>
                                 <label for="employment-select">Which option best describes you?</label>
@@ -306,7 +333,7 @@
                                     <option value="other">Other</option>
                                 </select>
                                 <label>
-                                    Which of the following drawbacks applies to the design on this form?<span style="font-size: 13px;">(Check all that apply)</span>
+                                    Which of the following drawbacks applies to the design on this form?<span style="font-size: 14px;font-weight: normal;">(Check all that apply)</span>
                                     <label class="check-container">
                                         <input type="checkbox" name="check">
                                         <span class="neu-check"></span>
