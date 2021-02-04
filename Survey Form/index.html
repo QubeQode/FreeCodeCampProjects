@@ -55,21 +55,6 @@
             .heading-space {
                 flex: 0.12;
             }
-            .content-height {
-                display: flex;
-                flex-direction: row;
-                flex: 1;
-                align-content: flex-end;
-            }
-            .content-width {
-                flex: 1;
-                display: flex;
-                flex-direction: column;
-            }
-            form {
-                display: flex;
-                flex-direction: column;
-            }
             #title {
                 font-size: 36px;
                 padding: 0px;
@@ -87,6 +72,30 @@
                 text-align: center;
                 margin: 4px 0px 9px 0px;
                 flex: 0.3;
+            }
+            .content-height {
+                display: flex;
+                flex-direction: row;
+                flex: 1;
+                align-content: flex-end;
+            }
+            .content-width {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+            }
+            .input-container {
+                flex: 1;
+                display: flex;
+                flex-direction: row;
+                justify-content: left;
+                align-items: center;
+            }
+            .input-container-alt {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: left;
             }
             label {
                 font-size: 17px;
@@ -232,8 +241,10 @@
                 border: 1px solid rgba(255, 255, 255, 0.025);
                 box-shadow: inset -0.5px -0.5px 1px 0 rgba(255, 255, 255, 0.73), inset 2.5px 2.5px 7px 0 rgba(217, 210, 200, 0.71); 
                 border-radius: 18px;
-                margin: 10px;
+                margin: 0px;
+                padding: 2px;
                 resize: none;
+                flex: 1;
             }
             textarea:focus {
                 outline: none;
@@ -245,6 +256,7 @@
                 border-radius: 18px;
                 margin: 10px;
                 color:rgba(0, 0, 0, 0.55);
+                flex: 0.3;
             }
             button:hover {
                 box-shadow: -1.5px -1.5px 3px 0 rgba(217, 210, 200, 0.71), 2.5px 2.5px 4px 0  rgba(255, 255, 255, 0.93);
@@ -267,25 +279,25 @@
                             Thoughts on neumorphism:
                         </h1>
                         <h2 id="subscript">
-                            The following questionnaire has been made designed using the tenents of the style in question. Please take a moment to analyze the user interface before answering the questions below:
+                            The following questionnaire has been designed using the tenents of the style in question. Please take a moment to analyze the user interface before answering the questions below:
                         </h2>
                     </div>
                     <div class="content-height">
-                        <div class="content-width">
-                            <form>
-                                <label for="name">
-                                    Name:
-                                <input type="text" name="name" class="neu-txt" style="margin-top: 2px;" placeholder="Enter your name" required>
-                                </label>
-                                <label for="email">
-                                    Email:
-                                    <input type="text" name="email" class="neu-txt" placeholder="Enter your Email" required>
-                                </label>
-                                <label for="age">
-                                    Age: <span style="font-size: 14px;font-weight: normal;">(Optional)</span>
-                                    <input type="number" name="age" class="neu-txt" placeholder="Age">
-                                </label>
-                                <label for="employment-select">Which option best describes you?</label>
+                        <form class="content-width">
+                            <label for="name" class="input-container">
+                                Name:
+                            <input type="text" name="name" class="neu-txt" placeholder="Enter your name" required>
+                            </label>
+                            <label for="email" class="input-container">
+                                Email:
+                                <input type="text" name="email" class="neu-txt" placeholder="Enter your Email" required>
+                            </label>
+                            <label for="age" class="input-container">
+                                Age: <span style="font-size: 14px;font-weight: normal;">(Optional)</span>
+                                <input type="number" name="age" class="neu-txt" placeholder="Age">
+                            </label>
+                            <div class="input-container">
+                                <label for="employment-select">Which option best describes you:</label>
                                 <select name="employment" id="employment-select" required>
                                     <option value="" disabled selected>--Please choose an option--</option>
                                     <option value="student">Student</option>
@@ -294,6 +306,8 @@
                                     <option value="incognito">Prefer not to say</option>
                                     <option value="other">Other</option>
                                 </select>
+                            </div>
+                            <div class="input-container-alt">
                                 <label>
                                     Would you use this design format on your own website?
                                     <label class="rad-container">
@@ -322,7 +336,9 @@
                                         Other
                                     </label>
                                 </label>
-                                <label for="fave-feature">What design feature is your favourite?</label>
+                            </div>
+                            <div class="input-container">
+                                <label for="fave-feature">Which design feature is your favourite:</label>
                                 <select name="fave-feature" id="fave-select">
                                     <option value="" disabled selected>--Please choose an option--</option>
                                     <option value="display-card">Display Card</option>
@@ -332,6 +348,8 @@
                                     <option value="check-list">Checkbox List</option>
                                     <option value="other">Other</option>
                                 </select>
+                            </div>
+                            <div class="input-container-alt">
                                 <label>
                                     Which of the following drawbacks applies to the design on this form?<span style="font-size: 14px;font-weight: normal;">(Check all that apply)</span>
                                     <label class="check-container">
@@ -365,12 +383,19 @@
                                         Minimalist design limits how much content can be placed on the webpage
                                     </label>
                                 </label>
-                                <label for="additional-thoughts">
-                                    Additional Thoughts:
+                            </div>
+                            <div class="input-container-alt">
+                                <label for="additional-thoughts" style="margin-bottom: 2px;">
+                                Additional Thoughts:
+                                </label>
+                                <div class="input-container">
                                     <textarea name="additonal-thoughts" placeholder="Enter your comments here..."></textarea>
+                                </div>
+                            </div>
+                            <div class="input-container" style="justify-content:center">
                                 <button type="submit">Submit</button>
-                            </form>
-                        </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
