@@ -15,7 +15,19 @@
                 width: 100%;
                 margin: 0px;
             }
-            #nav-container {
+            #logo-container {
+                flex: 0.1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #logo-container #header-img {
+                width: 40px;
+                height: 40px;
+                object-fit: scale-down;
+                object-position: 50% 50%;
+            }
+            #header {
                 display: flex;
                 flex-direction: row;
                 position: fixed;
@@ -29,38 +41,64 @@
                 display: flex; 
                 flex-direction: column;
             }
-            ul {
+            #nav-bar {
                 margin: 0px;
                 padding: 0px;
                 list-style-type: none;
                 display: flex;
                 flex-direction: row;
+                flex: 1;
+            }
+            ul {
+                margin: 0px;
+                padding: 0px;
+                list-style-type: none;
+                flex-direction: row;
+                display: flex;
+                flex: 1;
+                align-items: center;
+            }
+            ul .nav-link {
+                flex: 1;
+                text-transform: capitalize;
+                font-size: 18px;
+            }
+            .width-margin {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
             }
         </style>
     </head>
     
     <body>
         <!--At least one media query-->
-        <div id="nav-container">
-            <!--Header is always at the top of the viewport-->
-            <!--Needs image with id="header-img"-->
-            <header id="header">
-                <nav id="nav-bar">
-                    <!--Three clickable links to corresponding parts of the landing page-->
-                    <ul>
+        <header id="header">
+            <div id="logo-container">
+                <img src="Images/NicePng_white-nike-logo-png_609637.png" id="header-img">
+            </div>
+            <nav id="nav-bar">
+                <!--Three clickable links to corresponding parts of the landing page-->
+                <ul>
+                    <div class="width-margin">
                         <li class="nav-link">
                             The Office Shoe
                         </li>
+                    </div>
+                    <div class="width-margin">
                         <li class="nav-link">
                             Product Details
                         </li>
+                    </div>
+                    <div class="width-margin">
                         <li class="nav-link">
                             Pre-Order Now
                         </li>
-                    </ul>
-                </nav>
-            </header>
-        </div>
+                    </div>
+                </ul>
+            </nav>
+        </header>
         <div id="product-page">
             <form id="form">
                 <input type="email" placeholder="Email">
