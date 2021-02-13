@@ -27,20 +27,48 @@
             #intro-graphic {
                 display: flex; 
                 flex-direction: column;
-                height: 100%;
+                height: 100vh;
+                width: auto;
                 background-image: url(./Images/urban-bckg-box.png);
                 background-position: center;
                 justify-content: center;
                 align-items: center;
             }
+            #intro-graphic a {
+                color: white;
+                flex: 0.1;
+                text-decoration: none;
+                margin-top: 15px;
+            }
             #intro-graphic #video {
                 background-color: rgba(0, 0, 0, 0.6);
                 border-radius: 13px;
-                width: 80%;
+                width: 80vh;
                 height: auto;
             }
             #intro-graphic #video:focus {
                 outline: none;
+            }
+            #bottom-txt {
+                display: flex;
+                flex-direction: row;
+                flex: 1;
+                width: 100vh;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                color: rgb(0, 0, 0);
+                text-transform: uppercase;
+                font-family: Arial, Helvetica, sans-serif;
+                background-image: url(./Images/white-streak-flip.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
+            #bottom-txt h1 {
+                margin: 0px;
+                padding: 0px;
+                font-size: 5vh;
             }
             #logo-container {
                 flex: 0.1;
@@ -69,6 +97,27 @@
                 max-width: 100%;
                 max-height: 100%;
             }
+            #top-txt {
+                display: flex;
+                flex-direction: row;
+                flex: 1;
+                width: 100vh;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                color: rgb(0, 0, 0);
+                text-transform: uppercase;
+                font-family: Arial, Helvetica, sans-serif;
+                background-image: url(./Images/white-streak.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
+            #top-txt h1 {
+                margin: 0px;
+                padding: 0px;
+                font-size: 5vh;
+            }
             ul {
                 margin: 0px;
                 padding: 0px;
@@ -82,6 +131,13 @@
                 flex: 1;
                 text-transform: capitalize;
                 font-size: 18px;
+            }
+            #video-container {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
             }
             .width-margin {
                 flex: 1;
@@ -120,10 +176,19 @@
             </nav>
         </header>
         <div id="intro-graphic">
-            <video id="video" controls>
-                <source src="Videos/ad-crop.mp4" type="video/mp4">
-                Sorry, this video is not compatible with your browser
-            </video>
+            <div id="top-txt">
+                <h1>Everyone's a Player.</h1>
+            </div>
+            <div id="video-container">
+                <video id="video" controls>
+                    <source src="Videos/ad-crop.mp4" type="video/mp4">
+                    Sorry, this video is not compatible with your browser
+                </video>
+            </div>
+            <a href="https://www.youtube.com/watch?v=Aw1o5tX0GdA&t=9s">Link to the Original Video</a>
+            <div id="bottom-txt">
+                <h1>Are you dressed for the game?</h1>
+            </div>
         </div>
         <div id="add-info">
             <div class="page-card"> 
