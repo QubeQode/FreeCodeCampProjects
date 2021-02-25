@@ -2,214 +2,9 @@
 <html>
     <head>
         <title>
-
+            Nike - Office Shoe
         </title>
-        <style>
-            html {
-                height: 100%;
-                width: 100%;
-            }
-            body {
-                height: 100%;
-                width: 100%;
-                margin: 0px;
-                background-color: rgba(233, 233, 236, 1);
-                font-family: Arial, Helvetica, sans-serif;
-            }
-            #bottom-txt {
-                display: flex;
-                flex-direction: row;
-                flex: 1;
-                width: 100vh;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                color: rgb(0, 0, 0);
-                text-transform: uppercase;
-                font-family: Arial, Helvetica, sans-serif;
-                margin: 5vh;
-                box-sizing: border-box;
-                max-width: fit-content;
-            }
-            #bottom-txt h1 {
-                margin: 0px;
-                padding: 0px;
-                font-size: 6.5vh;
-            }
-            #header {
-                display: flex;
-                flex-direction: row;
-                position: fixed;
-                background-image: linear-gradient(rgba(0, 0, 0, 1),rgba(0, 0, 0, 0.77));
-                width: 100%;
-                height: 3.5vh;
-                color: rgba(255, 255, 255, 1);
-                z-index: 1;
-            }
-            #intro-graphic {
-                display: flex; 
-                flex-direction: column;
-                padding-top: 10vh;
-                background-image: linear-gradient(90deg, #e9e9ec 0.5%, #d53d29 0.5% 2%, #e9e9ec 2% 4.5%,  #d53d29 4.5% 16%, #e9e9ec 16% 18%,  #d53d29 18% 23%, #e9e9ec 23% 25%,  #d53d29 25% 100%);
-                justify-content: center;
-                align-items: center;
-                box-shadow: 1px 8px 9px 0 rgba(0, 0, 0, 0.2);
-            }
-            #intro-graphic #video {
-                background-color: rgba(0, 0, 0, 0.6);
-                border-radius: 13px;
-            }
-            #intro-graphic #video:focus {
-                outline: none;
-            }
-            #logo-container {
-                flex: 0.1;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            #logo-container #header-img {
-                width: 40px;
-                height: 40px;
-                object-fit: scale-down;
-                object-position: 50% 50%;
-            }
-            #nav-bar {
-                margin: 0px;
-                padding: 0px;
-                list-style-type: none;
-                display: flex;
-                flex-direction: row;
-                flex: 1;
-            }
-            .neu-banner {
-                box-shadow:-5px -3px 19px 0 rgba(250, 250, 250, 0.9), 1px 8px 9px 0 rgba(0, 0, 0, 0.1);
-                min-height: auto;
-                min-width: 100%;
-                margin: 50px 0px;
-                padding: 1vh;
-                box-sizing: border-box;
-                background-image: linear-gradient(45deg, #d53d29 55%,#e9e9ec 55% 70%,#d53d29 70% 80%,#e9e9ec 80% 100%);
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-            }
-            .neu-box {
-                box-shadow:-5px -2px 9px 0 rgba(250, 250, 250, 0.9), 1px 8px 9px 0 rgba(0, 0, 0, 0.1);
-                min-height: 50vh;
-                min-width: 100%;
-                margin-bottom: 35px;
-                padding: 1vh;
-                border-radius: 2vh;
-                box-sizing: border-box;
-            }
-            .page-card {
-                display: flex;
-                flex: 1;
-                justify-content: center;
-                max-width: 100%;
-                max-height: 100%;
-            }
-            .product-width {
-                flex: 0.8;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-            }
-            .product-width-100 {
-                flex: 1;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-            }
-            #product-info {
-                display: flex;
-                flex-direction: row;
-                flex: 0.4;
-                align-items: center;
-                justify-content: center;
-            }
-            #product-page {
-                display: flex;
-                flex-direction: column;
-            }
-            #pre-order {
-                display: flex;
-                flex-direction: row;
-                flex: 1;
-                align-items: center;
-                justify-content: center;
-            }
-            #shoe-container {
-                flex: 0.8;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            #shoe-container img {
-                border-radius: 100%;
-                background-image: linear-gradient(45deg, #d53d29 47.25%, #e9e9ec 47.25% 76.8%, #d53d29 76.8% 100%);
-                padding: 1vh;
-                box-shadow:-1px -1px 2px 0 rgba(0, 0, 0, 0.1), 1px 1px 2px 0 rgba(0, 0, 0, 0.1);
-            }
-            #shoe-description {
-                flex: 0.8;
-            }
-            #shoe-filler {
-                flex: 0.2;
-                display: flex;
-                color: transparent;
-            }
-            #shoe-margin {
-                padding: 2.2vh;
-                margin-left: 4vh;
-            }
-            #shoe-margin h2 {
-                font-size: 3.7vh;
-            }
-            #shoe-margin h3 {
-                box-sizing: border-box;
-                padding-bottom: 0.6vh;
-                border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-            }
-            #shoe-margin p {
-                font-weight: 500;
-            }
-            #shoe-text {
-                margin-bottom: 0px;
-                margin-top: 1vh;
-            }
-            ul {
-                margin: 0px;
-                padding: 0px;
-                list-style-type: none;
-                flex-direction: row;
-                display: flex;
-                flex: 1;
-                align-items: center;
-            }
-            ul .nav-link {
-                flex: 1;
-                text-transform: capitalize;
-                font-size: 18px;
-            }
-            #video-container {
-                flex: 1;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-            .width-margin {
-                flex: 1;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-        </style>
+        <link href="StyleSheet.css" rel="stylesheet">
     </head>
     
     <body>
@@ -268,7 +63,7 @@
                                     Description 
                                 </h3>
                                 <p>
-                                    Featuring our lightweight, cushioned design with a formal edge, the Office Shoe will bring our branded, performance enhacing formula to your work life. Designed with the same expertise present in our streetwear, you can expect the classic comfort of our sneakers with a formal edge.  
+                                    Featuring our lightweight, cushioned design, the Office Shoe will bring our branded, performance enhacing formula to your work life. Designed with the same expertise present in our streetwear, you can expect the classic comfort of our sneakers with a formal edge.  
                                 </p>
                             </div>
                         </div>
@@ -285,6 +80,126 @@
                 <div class="product-width">
                     <div class="neu-box">
                         <form id="form">
+                            <div id="shoe-size">
+                                <div class="column-width">
+                                    <div class="column">
+                                        <label class="rad-container" name="size-radio">
+                                            <input type="radio" name="radio" value="M4/W5.5">
+                                            <span class="select-icon"></span>
+                                            US M 4/ W 5.5
+                                        </label>
+                                        <label class="rad-container" name="size-radio">
+                                            <input type="radio" name="radio" value="M5/W6.5">
+                                            <span class="select-icon"></span>
+                                            US M 5/ W 6.5
+                                        </label>
+                                        <label class="rad-container" name="size-radio">
+                                            <input type="radio" name="radio" value="M6/W7.5">
+                                            <span class="select-icon"></span>
+                                            US M 6/ W 7.5
+                                        </label>
+                                        <label class="rad-container" name="size-radio">
+                                            <input type="radio" name="radio" value="M7/W8.5">
+                                            <span class="select-icon"></span>
+                                            US M 7/ W 8.5
+                                        </label>
+                                        <label class="rad-container" name="size-radio">
+                                            <input type="radio" name="radio" value="M8/W9.5">
+                                            <span class="select-icon"></span>
+                                            US M 8/ W 9.5
+                                        </label>
+                                        <label class="rad-container" name="size-radio">
+                                            <input type="radio" name="radio" value="M9/W10.5">
+                                            <span class="select-icon"></span>
+                                            US M 9/ W10.5
+                                        </label>
+                                        <label class="rad-container" name="size-radio">
+                                            <input type="radio" name="radio" value="M10/W11.5">
+                                            <span class="select-icon"></span>
+                                            US M 10/ W 11.5
+                                        </label>
+                                        <label class="rad-container" name="size-radio">
+                                            <input type="radio" name="radio" value="M11/W12.5">
+                                            <span class="select-icon"></span>
+                                            US M 11/ W 12.5
+                                        </label>
+                                        <label class="rad-container" name="size-radio">
+                                            <input type="radio" name="radio" value="M12/W13.5">
+                                            <span class="select-icon"></span>
+                                            US M 12/ W 13.5
+                                        </label>
+                                        <label class="rad-container" name="size-radio">
+                                            <input type="radio" name="radio" value="M13/W14.5">
+                                            <span class="select-icon"></span>
+                                            US M 13/ W 14.5
+                                        </label>
+                                        <label class="rad-container" name="size-radio">
+                                            <input type="radio" name="radio" value="M15/W16.5">
+                                            <span class="select-icon"></span>
+                                            US M 15/ W 16.5
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="column-width">
+                                    <div class="column">
+                                        <label class="rad-container" name="size-radio">
+                                            <input type="radio" name="radio" value="M4.5/W6">
+                                            <span class="select-icon"></span>
+                                            US M 4.5/ W 6
+                                        </label>
+                                        <label class="rad-container" name="size-radio">
+                                            <input type="radio" name="radio" value="M5.5/W7">
+                                            <span class="select-icon"></span>
+                                            US M 5.5/ W 7
+                                        </label>
+                                        <label class="rad-container" name="size-radio">
+                                            <input type="radio" name="radio" value="M6.5/W8">
+                                            <span class="select-icon"></span>
+                                            US M 6.5/ W 8
+                                        </label>
+                                        <label class="rad-container" name="size-radio">
+                                            <input type="radio" name="radio" value="M7.5/W9">
+                                            <span class="select-icon"></span>
+                                            US M 7.5/ W 9
+                                        </label>
+                                        <label class="rad-container" name="size-radio">
+                                            <input type="radio" name="radio" value="M8.5/W10">
+                                            <span class="select-icon"></span>
+                                            US M 8.5/ W 10
+                                        </label>
+                                        <label class="rad-container" name="size-radio">
+                                            <input type="radio" name="radio" value="M9.5/W11">
+                                            <span class="select-icon"></span>
+                                            US M 9.5/ W 11
+                                        </label>
+                                        <label class="rad-container" name="size-radio">
+                                            <input type="radio" name="radio" value="M10.5/W12">
+                                            <span class="select-icon"></span>
+                                            US M 10.5/ W 12
+                                        </label>
+                                        <label class="rad-container" name="size-radio">
+                                            <input type="radio" name="radio" value="M11.5/W13">
+                                            <span class="select-icon"></span>
+                                            US M 11.5/ W 13
+                                        </label>
+                                        <label class="rad-container" name="size-radio">
+                                            <input type="radio" name="radio" value="M12.5/W14">
+                                            <span class="select-icon"></span>
+                                            US M 12.5/ W 14
+                                        </label>
+                                        <label class="rad-container" name="size-radio">
+                                            <input type="radio" name="radio" value="M14/W15.5">
+                                            <span class="select-icon"></span>
+                                            US M 14/ W 15.5
+                                        </label>
+                                        <label class="rad-container" name="size-radio">
+                                            <input type="radio" name="radio" value="M16/W17.5">
+                                            <span class="select-icon"></span>
+                                            US M 16/ W 17.5
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
                             <input type="email" placeholder="Email">
                             <input type="submit" id="submit">
                         </form> 

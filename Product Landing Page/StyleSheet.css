@@ -1,0 +1,291 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    background-color: rgba(233, 233, 236, 1);
+    font-family: Arial, Helvetica, sans-serif;
+}
+#bottom-txt {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    width: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    color: #e9e9ec;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 2.5vh;
+    margin-right: 0;
+    margin-bottom: 0;
+    box-sizing: border-box;
+    max-width: fit-content;
+}
+#bottom-txt h1 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 5.76vh;
+}
+.column-width {
+    display: flex;
+    flex-direction: row;
+    flex: 0.5;
+    align-items: center;
+    justify-content: center;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    height: 100%;
+}
+.column label {
+    display: flex;
+    flex-direction: row;
+    flex: 0.3;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+#form {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+#header {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    background-image: linear-gradient(rgba(0, 0, 0, 1),rgba(0, 0, 0, 0.77));
+    width: 100%;
+    height: 3.5vh;
+    color: rgba(255, 255, 255, 1);
+    z-index: 1;
+}
+#intro-graphic {
+    display: flex; 
+    flex-direction: column;
+    background-image: linear-gradient(90deg, #e9e9ec 0.5%, #d53d29 0.5% 3%, #e9e9ec 3% 5.5%,  #d53d29 5.5% 9%, #e9e9ec 9% 10%,  #d53d29 10% 16%, #e9e9ec 16% 16.6%,  #d53d29 16.6% 100%);
+    justify-content: center;
+    align-items: flex-end;
+    padding: 4vh;
+    box-shadow: 1px 8px 9px 0 rgba(0, 0, 0, 0.2);
+}
+#intro-graphic #video {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 13px;
+}
+#intro-graphic #video:focus {
+    outline: none;
+}
+#logo-container {
+    flex: 0.1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#logo-container #header-img {
+    width: 40px;
+    height: 40px;
+    object-fit: scale-down;
+    object-position: 50% 50%;
+}
+#nav-bar {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+.neu-banner {
+    box-shadow:-5px -3px 19px 0 rgba(250, 250, 250, 0.9), 1px 8px 9px 0 rgba(0, 0, 0, 0.1);
+    min-height: auto;
+    min-width: 100%;
+    margin: 50px 0px;
+    padding: 1vh;
+    box-sizing: border-box;
+    background-image: linear-gradient(45deg, #d53d29 55%,#e9e9ec 55% 70%,#d53d29 70% 80%,#e9e9ec 80% 100%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.neu-box {
+    box-shadow: -10px -10px 25px 0 rgba(250, 250, 250, 1), 11px 11px 22px 0 rgba(0, 0, 0, 0.1), inset -1px -1px 10px 0 rgba(0, 0, 0, 0.2), inset 1px 1px 10px 0 rgba(0, 0, 0, 0.2);
+    min-height: 50vh;
+    min-width: 100%;
+    margin-bottom: 35px;
+    padding: 2vh;
+    border-radius: 4vh;
+    box-sizing: border-box;
+    background-color: #d53d29;
+    display: flex;
+    flex-direction: column;
+}
+.page-card {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    max-width: 100%;
+    max-height: 100%;
+}
+#pre-order {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+#product-info {
+    display: flex;
+    flex-direction: row;
+    flex: 0.4;
+    align-items: center;
+    justify-content: center;
+}
+#product-page {
+    display: flex;
+    flex-direction: column;
+}
+.product-width {
+    flex: 0.87;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.product-width-100 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.rad-container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    color: #e9e9ec;
+    font-size: 1.77vh;
+    border: 0.3vh solid transparent;
+}
+.rad-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.rad-container:hover {
+    border: 0.3vh solid #e9e9ec;
+    border-radius: 3vh;
+}
+.rad-container input:checked ~ .select-icon:after {
+    display: block;
+}
+.rad-container .select-icon:after {
+    background-color: #e9e9ec;
+    width: 1.3vh;
+    height: 1.3vh;
+    top: 0.24vh;
+    left: 0.24vh;
+    border-radius: 50%;
+}
+.select-icon {
+    position: absolute;
+    left: 1.4vh;
+    width: 1.8vh;
+    height: 1.8vh;
+    border: 0.3vh solid #e9e9ec;
+    border-radius: 50%;
+}
+.select-icon:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+#shoe-container {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#shoe-container img {
+    border-radius: 100%;
+    background-image: linear-gradient(45deg, #d53d29 47.25%, #e9e9ec 47.25% 76.8%, #d53d29 76.8% 100%);
+    padding: 1vh;
+    box-shadow:-1px -1px 2px 0 rgba(0, 0, 0, 0.1), 1px 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+#shoe-description {
+    flex: 0.8;
+    color: #e9e9ec;
+}
+#shoe-filler {
+    flex: 0.2;
+    display: flex;
+    color: transparent;
+}
+#shoe-margin {
+    padding: 2.2vh;
+    margin-left: 4vh;
+}
+#shoe-margin h1 {
+    text-transform: uppercase;
+}
+#shoe-margin h2 {
+    font-size: 3.7vh;
+}
+#shoe-margin h3 {
+    box-sizing: border-box;
+    padding-bottom: 0.6vh;
+    border-bottom: 1px solid #e9e9ec;
+}
+#shoe-margin p {
+    font-weight: 500;
+}
+#shoe-size {
+    display: flex;
+    flex-direction: row;
+    flex: 0.8;
+}
+#shoe-text {
+    margin-bottom: 0px;
+    margin-top: 1vh;
+}
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    flex-direction: row;
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+ul .nav-link {
+    flex: 1;
+    text-transform: capitalize;
+    font-size: 18px;
+}
+#video-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3.5vh;
+}
+.width-margin {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
