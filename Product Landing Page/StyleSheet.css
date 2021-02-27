@@ -31,6 +31,43 @@ body {
     padding: 0px;
     font-size: 5.76vh;
 }
+.button-format {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #e9e9ec;
+    padding: 1.8vh;
+    box-sizing: border-box;
+}
+.button-format input {
+    flex: 0.3;
+    border-radius: 3vh;
+    border: 1px solid transparent;
+    padding: 0.4vh;
+    background-color: #d53d29;
+    border: 2px solid #e9e9ec;
+    font-size: 1.63vh;
+    color: #e9e9ec;
+}
+.button-format input:focus {
+    outline: none;
+}
+.button-format input:hover {
+    outline: none;
+    border: 2px solid transparent;
+    background-color: #e9e9ec;
+    color: #d52d29;
+    transition-duration: 200ms;
+}
+.button-format input:active {
+    outline: none;
+    border: 2px solid transparent;
+    background-color: #e9e9ec;
+    color: #d52d29;
+    box-shadow: inset 1px 1px 2px 0 rgba(0, 0, 0, 0.4), inset -1px -1px 2px 0 rgba(0, 0, 0, 0.3);
+    transition-duration: 100ms;
+}
 .column-width {
     display: flex;
     flex-direction: row;
@@ -53,6 +90,24 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
+    color: #e9e9ec;
+    font-size: 1.77vh;
+    
+}
+.column .rad-container {
+    margin-bottom: 0.4vh;
+}
+.contact-info {
+    border-radius: 3vh;
+    box-sizing: border-box;
+    padding: 0.4vh;
+    padding-left: 1vh;
+    margin: 0.4vh;
+    border: 1px solid transparent;
+    box-shadow: inset 1px 1px 2px 0 rgba(0, 0, 0, 0.4), inset -1px -1px 2px 0 rgba(0, 0, 0, 0.3);
+}
+.contact-info:focus {
+    outline: none;
 }
 #form {
     display: flex;
@@ -72,10 +127,10 @@ body {
 #intro-graphic {
     display: flex; 
     flex-direction: column;
-    background-image: linear-gradient(90deg, #e9e9ec 0.5%, #d53d29 0.5% 3%, #e9e9ec 3% 5.5%,  #d53d29 5.5% 9%, #e9e9ec 9% 10%,  #d53d29 10% 16%, #e9e9ec 16% 16.6%,  #d53d29 16.6% 100%);
+    background-image: linear-gradient(90deg, #e9e9ec 0.5%, #d53d29 0.5% 3%, #e9e9ec 3% 5.5%,  #d53d29 5.5% 9%, #e9e9ec 9% 10%,  #d53d29 10% 17%, #e9e9ec 17% 17.6%,  #d53d29 17.6% 100%);
     justify-content: center;
     align-items: flex-end;
-    padding: 4vh;
+    padding: 5.2vh;
     box-shadow: 1px 8px 9px 0 rgba(0, 0, 0, 0.2);
 }
 #intro-graphic #video {
@@ -84,6 +139,26 @@ body {
 }
 #intro-graphic #video:focus {
     outline: none;
+}
+label.sub-heading {
+    color: #e9e9ec;
+    font-size: 2.3vh;
+    padding: 1.27vh;
+    align-items: center;
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: row;
+    font-weight: 600;
+}
+label.sub-heading-2 {
+    color: #e9e9ec;
+    font-size: 1.63vh;
+    padding: 1.27vh;
+    padding-top: 0;
+    align-items: center;
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: row;
 }
 #logo-container {
     flex: 0.1;
@@ -124,11 +199,21 @@ body {
     min-width: 100%;
     margin-bottom: 35px;
     padding: 2vh;
+    padding-bottom: 0;
     border-radius: 4vh;
     box-sizing: border-box;
     background-color: #d53d29;
     display: flex;
     flex-direction: column;
+}
+.neu-box h1 {
+    margin: 0px;
+    padding-left: 1.43vh;
+    padding-bottom: 0.6vh;
+    color: #e9e9ec;
+    border-bottom: 1px solid #e9e9ec;
+    font-size: 3.3vh;
+    text-transform: uppercase;
 }
 .page-card {
     display: flex;
@@ -173,9 +258,10 @@ body {
     display: block;
     position: relative;
     cursor: pointer;
-    color: #e9e9ec;
-    font-size: 1.77vh;
+    padding: 0.6vh;
     border: 0.3vh solid transparent;
+    border-radius: 3vh;
+    box-sizing: border-box;
 }
 .rad-container input {
     position: absolute;
@@ -193,17 +279,17 @@ body {
 }
 .rad-container .select-icon:after {
     background-color: #e9e9ec;
-    width: 1.3vh;
-    height: 1.3vh;
-    top: 0.24vh;
-    left: 0.24vh;
+    width: 0.75vh;
+    height: 0.75vh;
+    top: 0.28vh;
+    left: 0.3vh;
     border-radius: 50%;
 }
 .select-icon {
     position: absolute;
     left: 1.4vh;
-    width: 1.8vh;
-    height: 1.8vh;
+    width: 1.3vh;
+    height: 1.3vh;
     border: 0.3vh solid #e9e9ec;
     border-radius: 50%;
 }
@@ -212,7 +298,6 @@ body {
     position: absolute;
     display: none;
 }
-
 #shoe-container {
     flex: 0.8;
     display: flex;
@@ -256,10 +341,15 @@ body {
     display: flex;
     flex-direction: row;
     flex: 0.8;
+    padding-bottom: 1vh;
+    border-bottom: 1px solid #e9e9ec;
 }
 #shoe-text {
     margin-bottom: 0px;
     margin-top: 1vh;
+}
+.contact-info {
+    flex: 0.4;
 }
 ul {
     margin: 0px;
@@ -289,3 +379,4 @@ ul .nav-link {
     flex-direction: column;
     align-items: center;
 }
+
