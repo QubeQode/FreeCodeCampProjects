@@ -91,24 +91,53 @@ body {
     justify-content: center;
     width: 100%;
     color: #e9e9ec;
-    font-size: 1.77vh;
+    font-size: 1.37vh;
     
 }
 .column .rad-container {
     margin-bottom: 0.4vh;
 }
 .contact-info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.contact-info .contact-input {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-bottom: 12px;
+    align-items: center;
+    justify-content: center;
+}
+.contact-info .contact-filler {
+    display: flex;
+    flex:1;
+    color: transparent;
+}
+.contact-info .sub-heading-2 {
+    display: flex;
+    flex-direction: column;
+    flex: 0.15;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+    margin-left: 5px;
+}
+.contact-input input {
     border-radius: 3vh;
     box-sizing: border-box;
     padding: 0.4vh;
     padding-left: 1vh;
-    margin: 0.4vh;
+    margin: 0.9vh;
     border: 1px solid transparent;
     box-shadow: inset 1px 1px 2px 0 rgba(0, 0, 0, 0.4), inset -1px -1px 2px 0 rgba(0, 0, 0, 0.3);
+    width: 100%;
 }
-.contact-info:focus {
+.contact-input input:focus {
     outline: none;
 }
+
 #form {
     display: flex;
     flex-direction: column;
@@ -140,25 +169,17 @@ body {
 #intro-graphic #video:focus {
     outline: none;
 }
-label.sub-heading {
+.sub-heading h2 {
     color: #e9e9ec;
     font-size: 2.3vh;
     padding: 1.27vh;
+    margin: 0.3vh;
+    margin-left: 0;
     align-items: center;
     justify-content: flex-start;
     display: flex;
     flex-direction: row;
     font-weight: 600;
-}
-label.sub-heading-2 {
-    color: #e9e9ec;
-    font-size: 1.63vh;
-    padding: 1.27vh;
-    padding-top: 0;
-    align-items: center;
-    justify-content: flex-start;
-    display: flex;
-    flex-direction: row;
 }
 #logo-container {
     flex: 0.1;
@@ -279,18 +300,18 @@ label.sub-heading-2 {
 }
 .rad-container .select-icon:after {
     background-color: #e9e9ec;
-    width: 0.75vh;
-    height: 0.75vh;
-    top: 0.28vh;
-    left: 0.3vh;
+    width: 8px;
+    height: 8px;
+    top: 3px;
+    left: 3px;
     border-radius: 50%;
 }
 .select-icon {
     position: absolute;
-    left: 1.4vh;
-    width: 1.3vh;
-    height: 1.3vh;
-    border: 0.3vh solid #e9e9ec;
+    left: 17px;
+    width: 14px;
+    height: 14px;
+    border: 3px solid #e9e9ec;
     border-radius: 50%;
 }
 .select-icon:after {
@@ -348,8 +369,14 @@ label.sub-heading-2 {
     margin-bottom: 0px;
     margin-top: 1vh;
 }
-.contact-info {
-    flex: 0.4;
+.sub-heading-2 .contact-height-margin {
+    color: #e9e9ec;
+    font-size: 1.63vh;
+    padding-right: 1.27vh;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 ul {
     margin: 0px;
