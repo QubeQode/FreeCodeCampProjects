@@ -212,6 +212,13 @@ body {
     justify-content: center;
     align-items: center;
 }
+@media screen and (max-width: 1021px) {
+    .neu-banner {
+        flex-direction: column;
+        background-image: linear-gradient(45deg, #d53d29 65%,#e9e9ec 65% 75%,#d53d29 75% 85%,#e9e9ec 85% 100%);        
+    }
+    #shoe-margin 
+}
 .neu-box {
     box-shadow: -10px -10px 25px 0 rgba(250, 250, 250, 1), 11px 11px 22px 0 rgba(0, 0, 0, 0.1), inset -1px -1px 10px 0 rgba(0, 0, 0, 0.2), inset 1px 1px 10px 0 rgba(0, 0, 0, 0.2);
     min-height: 50vh;
@@ -325,9 +332,9 @@ body {
 }
 #shoe-container img {
     border-radius: 100%;
-    border: 5px solid #d53d29;
+    border: 6px solid #d53d29;
     background-color: rgba(233, 233, 236, 1);
-    box-shadow: inset -1px -1px 2px 0 rgba(0, 0, 0, 0.2), inset 1px 1px 2px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: inset -1.5px -1.5px 2px 0 rgba(0, 0, 0, 0.2), inset 1.5px 1.5px 2px 0 rgba(0, 0, 0, 0.2);
     padding: 1vh;
 }
 #shoe-description {
