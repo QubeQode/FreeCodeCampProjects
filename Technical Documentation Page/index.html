@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS Crash Course
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="StyleSheet.css" rel="stylesheet">
+    </head>
+    <body>
+        <main id="main-doc">
+            <div class="column-wrapper-nav">
+                <div class="scrolling-nav">
+                    <nav id="navbar">
+                        <header id="current-document">
+                            CSS Crash Course
+                        </header>
+                        <a class="nav-link" href="#Intro_to_CSS" style="margin-top: 10px;">
+                            Intro to CSS
+                        </a>
+                        <a class="nav-link" href="#CSS_Selectors">
+                            CSS Selectors
+                        </a>
+                        <a class="nav-link" href="#Color_in_CSS">
+                            Color in CSS
+                        </a>
+                        <a class="nav-link" href="#Custom_Variables">
+                            Custom Variables
+                        </a>
+                        <a class="nav-link" href="#Flexbox">
+                            Flexbox
+                        </a>
+                        <a class="nav-link" href="#box-shadow_Property">
+                            box-shadow Property
+                        </a>
+                        <a class="nav-link" href="#Gradients">
+                            Gradients
+                        </a>
+                        <a class="nav-link" href="#transform_Property">
+                            transform Property
+                        </a>
+                        <a class="nav-link" href="#Animation_in_CSS">
+                            Animation in CSS
+                        </a>
+                        <a class="nav-link" href="#Responsive_Media">
+                            Responsive Media
+                        </a>
+                    </nav>
+                </div>
+            </div>
+            <div class="column-wrapper-main">
+                <section class="main-section" id="Intro_to_CSS">
+                    <header>
+                        Intro to CSS
+                    </header>
+                    <div class="content-box">
+                        <h1>
+                            Cascading Style Sheets
+                        </h1>
+                        <p>
+                            Informs the browser on how to display text and other content written in HTML. CSS is case sensitive so capitalization is important. CSS allows you to control:
+                        </p>
+                        <ul>
+                            <li>
+                                Color
+                            </li>
+                            <li>
+                                Fonts
+                            </li>
+                            <li>
+                                Positioning
+                            </li>
+                            <li>
+                                Spacing
+                            </li>
+                            <li>
+                                Sizing
+                            </li>
+                            <li>
+                                Decorations
+                            </li>
+                            <li>
+                                Transitions
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content-box">
+                        <h1>
+                            Inline CSS
+                        </h1>
+                        <p>
+                            Using the <code>style=""</code> attribute within the HTML element tag. E.g.
+                        </p>
+                        <code>
+                            <pre>
+&lt;h1 <b>style="color:blue;"</b>&gt;
+                            </pre>
+                        </code>
+                        <p>
+                            This form of styling is only used when you wish to have a specific, single element look a certain way. To do this for every individual HTML element would be both tedious and an organizational nightmare.
+                        </p>
+                    </div>
+                    <div class="content-box">
+                        <h1>
+                            Internal  CSS
+                        </h1>
+                        <p>
+                            Using the <code>&lt;style&gt;</code> attribute within the <code>&lt;head&gt;</code> element tag. E.g.
+                        </p>
+                        <code>
+                            <pre>
+&lt;head&gt;
+    <b>&lt;style&gt;</b>
+        h1 {
+            color: red;
+        }
+        p {
+            color: blue;
+        }
+    <b>&lt;/style&gt;</b>
+&lt;/head&gt;
+                            </pre>
+                        </code>
+                        <p>
+                            Here the <code>&lt;style&gt;</code> attribute would set the font color of every <code>&lt;h1&gt;</code> and <code>&lt;p&gt;</code> element within the HTML page to the defined color values.
+                        </p>
+                    </div>
+                    <div class="content-box">
+                        <h1>
+                            External CSS
+                        </h1>
+                        <p>
+                            Using an external style sheet with collated definitions for the various style templates you wish to have in your HTML. This sheet is then referenced within the HTML code in order to apply the relevant style features to the HTML code. E.g.
+                        </p>
+                        <code>
+                            <pre>
+&lt;head&gt;
+    <b>&lt;link rel="stylesheet" href="styles.css"&gt;</b>
+&lt;/head&gt;
+                            </pre>
+                        </code>
+                        <p>
+                            This is used when you want to define a uniform style for a multitude of various HTML pages; creating a centralized data pool for all the various pages to draw from in order to maintain consistency
+                        </p>
+                        <h2>
+                            Link Element
+                        </h2>
+                        <p>
+                            An HTML element commonly used in tandem with CSS. The element is used to define the relationship between the current document and an external resource. In the case of CSS this is as external style sheet (byproduct of the external css styling method)
+                        </p>
+                        <h2>
+                            Relationship Attribute
+                        </h2>
+                        <p>
+                            The <code>rel=</code> tag is used to further clarify the relationship between the linked document and current document when the <code>href=</code> tag is used. In the case of CSS the <code>rel=</code> value would be "stylesheet" as can be seen in the example above
+                        </p>
+                        <h2>
+                            'href' Tag
+                        </h2>
+                        <p>
+                            The <code>href=</code> tag is used to specify the exact url of the page you wish to link to
+                        </p>
+                    </div>
+                    <div class="content-box">
+                        <h1>
+                            'color' Property
+                        </h1>
+                        <p>
+                            The ‘color’ style property defines the color of the element it is attributed to. The word ‘color’ is always followed by a colon and the color value by a semi-colon. E.g.
+                        </p>
+                        <code>
+                            <pre>
+&lt;style&gt;
+    p {
+        <b>color: red;</b>
+    }
+&lt;/style&gt;
+                            </pre>
+                        </code>
+                    </div>
+                    <div class="content-box">
+                        <h1>
+                            Class Declaration
+                        </h1>
+                        <p>
+                            A defined class used to group HTML elements via a defined feature. In the CSS style element class names start with a period however when referencing it in your HTML element as outlined below the class name no longer includes the period. E.g.
+                        </p>
+                        <code>
+                            <pre>
+&lt;head&gt;
+    &lt;style&gt;
+        <b>.blue-text</b> {
+            color: blue;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1 <b>class="blue-text"</b>&gt;
+        Placeholder Heading
+    &lt;/h1&gt;
+&lt;/body&gt;
+                            </pre>
+                        </code>
+                        <p>
+                            Using this system when you add the <code>class="blue-text"</code> attribute to any HTML elements the <code>color: blue;</code> ensures that the font text is blue. By using class declarations you format the relevant elements to the standards defined within them
+                        </p>
+                        <h2>
+                            'class' Attribrute
+                        </h2>
+                        <p>
+                            An HTML attribute used to specify one or more classnames for an HTML element
+                        </p>
+                    </div>
+                    <div class="content-box">
+                        <h1>
+                            'font-family' Property
+                        </h1>
+                        <p>
+                            Set which font an element should use. E.g.
+                        </p>
+                        <code>
+                            <pre>
+&lt;style&gt;
+    h2 {
+        <b>font-family: sans-serif;</b>
+    }
+&lt;/style&gt;
+                            </pre>
+                        </code>
+                        <p>
+                            Using the link element you can also link external fonts into your HTML page via the font’s URL. E.g.
+                        </p>
+                        <code>
+                            <pre>
+&lt;head&gt;
+    <b>.epic-font {
+            font-family: 'Epic downloaded Font', Ariel;
+    }
+    </b>
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1 <b>class="epic-font"&gt;</b>
+&lt;/body&gt;
+                            </pre>
+                        </code>
+                        <p>
+                            The alternate font is an optional choice applied if the initial specified font is unable to load or unavailable for some reason. As highlighted above, if the font contins white space or special characters in its name then within the <code>font-family:</code> section of the style attribute it must be wrapped in single quotations
+                        </p>
+                        <h2>
+                            'type="text/css"' Attribute
+                        </h2>
+                        <p>
+                            defines the content type as CSS. In the above use case it is defining the linked URL as a CSS text document that you are linking into your HTML page. To refer back to the definition of CSS this means you are telling the web browser that the linked document intends to inform it on how to display content written in HTML
+                        </p>
+                    </div>
+                    <div class="content-box">
+                        <h1>
+                            'width' Property
+                        </h1>
+                        <p>
+                            Control the width of an element using pixel values to specify the desired end result. E.g.
+                        </p>
+                        <code>
+                            <pre>
+&lt;style&gt;
+    .wide-heading-banner {
+    <b>width: 250px;</b>
+    }
+&lt;/style&gt;
+                            </pre>
+                        </code>
+                    </div>
+                    <div class="content-box">
+                        <h1>
+                            'border' Property
+                        </h1>
+                        <p>
+                            The <code>border</code> property allows you to specify the style, width and color of an HTML element’s border by making use of the <code>border-style</code>, <code>border-width</code> and <code>border-color</code> attributes
+                        </p>
+                        <h2>
+                            'border-style' Types
+                        </h2>
+                        <ul>
+                            <li>
+                                "dotted" - dotted border
+                            </li>
+                            <li>
+                                "dashed" - dashed border
+                            </li>
+                            <li>
+                                "solid" - solid, single color border
+                            </li>
+                            <li>
+                                "double" - single color, double line border
+                            </li>
+                            <li>
+                                "groove", "ridge", "inset", "outset" - solid, two colored border in various styles mimicking 3D shading
+                            </li>
+                        </ul>
+                        <p>
+                            E.g. of 'border' shorthand usage
+                        </p>
+                        <code>
+                            <pre>
+&lt;head&gt;
+    &lt;style&gt;
+        .thin-green-border {
+            <b>border: solid 3px green;</b>
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p <b>class="thin-green-border"&gt;</b>Content with thin, green border&lt;/p&gt;
+&lt;/body&gt;
+                            </pre>
+                        </code>
+                    </div>
+                    <div class="content-box">
+                        <h1>
+                            'border-radius' Attribute
+                        </h1>
+                        <p>
+                            Allows you to round the corners of any HTML element by adding the attribute to the relevant CSS class. Can be defined using pixel, viewheight or % values E.g.
+                        </p>
+                        <code>
+                            <pre>
+&lt;head&gt;
+    &lt;style&gt;
+        .round-border {
+            <b>border-radius: 10px;</b>
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;img  <b>class="round-border"</b> src="image-source" alt="image-description"&gt;
+&lt;/body&gt;
+                            </pre>
+                        </code>
+                    </div>
+                    <div class="content-box">
+                    <h1>
+                        'background-color' Property
+                    </h1>
+                        <p>
+                            Allows you to set the background color of an HTML element. E.g.
+                        </p>
+                        <code>
+                            <pre>
+&lt;head&gt;
+    &lt;style&gt;
+        .green-background {
+            <b>background-color: green;</b>
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p <b>class="green-background"</b>&gt;Text with green background&lt;/p&gt;
+&lt;/body&gt;
+                            </pre>
+                        </code>
+                    </div>
+                    <div class="content-box">
+                        <h1>
+                            Referencing 'id' Attributed Elements
+                        </h1>
+                        <p>
+                            Used when you wish to enforce a specific design choice onto any elements defined by a specific classifier. By making use of the <code>id=""</code> feature you can uniquely define an element or you can group a collection of elements under the same unique definition and apply the relevant stylistic properties to said definition. When referencing an <code>id</code> in CSS you must use a <code>#</code> in place of the period
+                        </p>
+                        <code>
+                            <pre>
+&lt;head&gt;
+    &lt;style&gt;
+        <b>#green-background</b> {
+            background-color: green;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p <b>id="green-background"</b>&gt;Text with green background&lt;/p&gt;
+&lt;/body&gt;
+                            </pre>
+                        </code>
+                        <p>
+                            Similar to the usage of CSS classes the ‘#’ identifier in the head section of the HTML page’s code lets the web browser know to present all HTML elements qualified with the attached styling data
+                        </p>
+                    </div>
+                    <div class="content-box">
+                        <h1>
+                            Spacing Elements
+                        </h1>
+                        <p>
+                            All HTML elements are encased within rectangles. Applying an outline of a predetermined pixel width and pattern to said rectangle is how the border is created. The qualities of this rectangle can however be modified to create the spacing desired from a design standpoint. This is done by making use of the <code>padding</code>, <code>border</code> and <code>margin</code> properties alongside a defined pixel or viewheight value. E.g.
+                        </p>
+                        <code>
+                            <pre>
+&lt;head&gt;
+    &lt;style&gt;
+        <b>#quotation {
+            padding: 1px;
+            border: 1 px;
+            margin-top: 1px;
+            margin-bottom: 1px;
+            margin-left: 1px;
+            margin-right: 1px;
+        }
+        </b>
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p <b>id="quotation"</b>&gt;Quotation with relevant formatting&lt;/p&gt;
+    &lt;p&gt;Regular paragraph&lt;/p&gt;
+    &lt;p <b>id="quotation"</b>&gt;Quotation with relevant formatting&lt;/p&gt;
+&lt;/body&gt;
+                            </pre>
+                        </code>
+                        <p>
+                            Here all elements with the <code>id="quotation"</code> attribute will be surrounded by a one pixel thin, black line, one pixel away from the content within the element and one pixel away from the content outside the element.
+                        </p>
+                        <h2>
+                            '-top', '-bottom', '-left','-right' Property Modifier
+                        </h2>
+                        <p>
+                            Used in tandem with ‘margin’, ‘border’ and ‘padding’ properties if different values are required on the different edges of the element border. In the above example you would only need to put the ‘margin’ property in since all the values are set to ‘1 px’ but they have been split up to illustrate the usage.
+                        </p>
+                        <h2>
+                            'border' Property
+                        </h2>
+                        <p>
+                            Unlike ‘margin’ and ‘padding’ the ‘border’ property is a shorthand that encompasses the multiple variations said property can have
+                        </p>
+                        <h2>
+                            'padding' Property
+                        </h2>
+                        <p>
+                            Used to define the spacing between the element border and the data presented within it
+                        </p>
+                        <h2>
+                            'margin' Property
+                        </h2>
+                        <p>
+                            Used to define the spacing between the element border and adjacent elements. If you set the margin to a negative value the element will grow larger
+                        </p>
+                    </div>
+                    <div class="content-box">
+                        <h1>
+                            Clockwise Notation
+                        </h1>
+                        <p>
+                            If four values are listed consecutively after either the ‘padding’ or ‘margin’ property the web browser will deal with them ‘chronologically’ or to be more specific in the same directional order as the hands of a clock. E.g.
+                        </p>
+                        <code>
+                            <pre>
+&lt;head&gt;
+    &lt;style&gt;
+        #spaghetti-review {
+            <b>padding: 1px 2px 3px 4px;</b>
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p id="spaghetti-review"&gt;Deep thoughts on spaghetti&lt;/p&gt;
+&lt;/body&gt;
+                            </pre>
+                        </code>
+                        <p>
+                            The formatting for the <code>id="spaghetti-review"</code> attribute translates to <code>padding-top: 1px;</code>, <code>padding-right: 2px;</code>, <code>padding-bottom: 3px;</code> and <code>padding-left: 4px;</code>. As can be seen the modifier values are assigned to the property in question in the same directional order as an analog clock.
+                        </p>
+                    </div>
+                </section>
+                <section class="main-section" id="CSS_Selectors">
+                    <header>
+                        CSS Selectors
+                    </header>
+                </section>
+                <section class="main-section" id="Color_in_CSS">
+                    <header>
+                        Color in CSS
+                    </header>                
+                </section>
+                <section class="main-section" id="Custom_Variables">
+                    <header>
+                        Custom Variables
+                    </header>        
+                </section>
+                <section class="main-section" id="Flexbox">
+                    <header>
+                        Flexbox
+                    </header>                
+                </section>
+                <section class="main-section" id="box-shadow_Property">
+                    <header>
+                        box-shadow Property
+                    </header>                
+                </section>
+                <section class="main-section" id="Gradients">
+                    <header>
+                        Gradients
+                    </header>                
+                </section>
+                <section class="main-section" id="transform_Property">
+                    <header>
+                        transform Property
+                    </header>                
+                </section>
+                <section class="main-section" id="Animation_in_CSS">
+                    <header>
+                        Animation in CSS
+                    </header>                
+                </section>
+                <section class="main-section" id="Responsive_Media">
+                    <header>
+                        Responsive Media
+                    </header>                
+                </section>
+            </div>
+        </main>
+    </body>
+</html>
