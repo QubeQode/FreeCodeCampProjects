@@ -35,7 +35,7 @@ code {
     background-color: rgb(37, 34, 34);
     text-align: left;
     border-radius: 15px;
-    padding: 5px;
+    padding: 5px 15px;
     margin: 12px 7px;
     display: flex;
     flex-direction: column;
