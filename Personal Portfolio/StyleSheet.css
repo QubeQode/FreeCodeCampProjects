@@ -11,6 +11,15 @@ body {
     padding: 0px;
     margin: 0px;
 }
+a {
+    text-decoration: none;
+    color: rgb(125, 62, 165);
+    font-weight: 600;
+    font-size: 20px;
+    max-width: 70%;
+    text-align: center;
+    padding: 6px;
+}
 .card-spacer {
     color: transparent;
     background-color: rgb(79, 42, 102);
@@ -26,6 +35,13 @@ body {
     justify-content: center;
     width: 100%;
     flex: 1;
+}
+#contact-info {
+    display: flex;
+    flex-direction: row;
+}
+#contact-info a {
+    padding: 12px;
 }
 h1 {
     margin: 0px;
@@ -57,6 +73,13 @@ h2 {
     border-radius: 11px;
     opacity: 75%;
 }
+#navbar {
+    height: 3vh;
+    position: fixed;
+    background-color: rgb(79, 42, 102);
+    width: 100%;
+    z-index: 1;
+}
 .project-box {
     display: flex;
     flex-direction: column;
@@ -64,11 +87,17 @@ h2 {
     background-color: rgb(40, 27, 49);
     box-shadow: -5px -5px 5px 0 rgba(99, 62, 122, 0.15), 5px 5px 5px 0 rgba(20, 7, 29, 0.3);
     border-radius: 15px;
-    margin: 60px;
+    margin: 50px;
     width: 36%;
     height: 36%;
     align-items: center;
     justify-content: center;
+}
+.project-box.r1 {
+    margin-bottom: 25px;
+}
+.project-box.r2 {
+    margin-top: 25px;
 }
 .project-card {
     min-height: 100vh;
@@ -99,20 +128,9 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.project-title a {
-    text-decoration: none;
-    color: rgb(125, 62, 165);
-    font-weight: 600;
-    font-size: 20px;
-    max-width: 70%;
-    text-align: center;
-    padding: 6px;
-    margin-bottom: 10px;
-    border-radius: 50px;
+    margin: 12px;
 }
 .project-viewport {
-    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -130,18 +148,11 @@ h2 {
     flex: 0.01;
     margin-bottom: 15px;
 }
-#navbar {
-    height: 3vh;
-    position: fixed;
-    background-color: rgb(79, 42, 102);
-    width: 100%;
-}
 #welcome-graphic {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 65px;
 }
 #welcome-section {
     height: 100vh;
