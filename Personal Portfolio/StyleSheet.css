@@ -85,8 +85,11 @@ h2 {
     justify-content: flex-end;
 }
 .navlink {
-    color:rgb(153, 87, 194);
+    color:rgb(176, 115, 214);
     padding: 0px 40px;
+}
+.profile-link {
+    
 }
 .project-box {
     display: flex;
