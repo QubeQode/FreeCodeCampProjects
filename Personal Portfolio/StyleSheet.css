@@ -88,10 +88,7 @@ h2 {
     color:rgb(172, 103, 214);
     padding: 0px 40px;
 }
-.profile-link {
-    
-}
-.project-box {
+.project-tile {
     display: flex;
     flex-direction: column;
     border: 8px solid rgb(79, 42, 102);
@@ -104,10 +101,10 @@ h2 {
     align-items: center;
     justify-content: center;
 }
-.project-box.r1 {
+.project-tile.r1 {
     margin-bottom: 25px;
 }
-.project-box.r2 {
+.project-tile.r2 {
     margin-top: 25px;
 }
 .project-card {
