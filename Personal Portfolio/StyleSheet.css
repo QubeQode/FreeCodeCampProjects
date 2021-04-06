@@ -39,6 +39,8 @@ a {
 #contact-info {
     display: flex;
     flex-direction: row;
+    text-justify: center;
+    align-items: center;
 }
 #contact-info a {
     padding: 12px;
@@ -47,15 +49,16 @@ h1 {
     margin: 0px;
     font-size: 120px;
     letter-spacing: 26px;
+    display: flex;
+    flex-direction: row;
 }
 h2 {
     margin: 0px;
-    padding: 2px;
-    padding-left: 20px;
     padding-top: 20px;
     font-size: 70px;
     letter-spacing: 13px;
     border-bottom: 4px solid rgb(107, 53, 141);
+    text-justify: center;
 }
 .img-container {
     display: flex;
@@ -72,6 +75,11 @@ h2 {
     height: 100%;
     border-radius: 11px;
     opacity: 75%;
+}
+#logo-graphic {
+    padding: 40px 25px;
+    margin: 35px;
+    border: 20px solid rgb(125, 62, 165);
 }
 #navbar {
     height: 3vh;
@@ -129,6 +137,7 @@ h2 {
     flex: 1;
     justify-content: center;
     width: 100%;
+    height: 100%;
     flex-wrap: wrap;
 }
 .project-title {
@@ -177,4 +186,48 @@ h2 {
     border: 30px solid rgb(79, 42, 102);
     border-radius: 40px;
     box-shadow: inset 5px 5px 20px 0 rgba(0, 0, 0, 0.4);
+}
+@media screen and (max-width:1030px) {
+    h1 {
+        font-size: 80px;
+    }
+    h2 {
+        font-size: 45px;
+    }
+    a#profile-link {
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 800px) {
+    h1 {
+        font-size: 60px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    a#profile-link {
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 640px) {
+    h1 {
+        font-size: 40px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    a#profile-link {
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 550px) {
+    h1 {
+        font-size: 20px;
+    }
+    h2 {
+        font-size: 10px;
+    }
+    a#profile-link {
+        font-size: 7px;
+    }
 }
