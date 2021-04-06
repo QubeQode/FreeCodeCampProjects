@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            :root{
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                width: 100%;
+                --off-white:rgb(240, 234, 234);
+                --alt-white:rgb(247, 240, 240);
+                font-family: Arial, Helvetica, sans-serif;
+                color: rgba(0, 0, 0, 0.55)
+            }
+           body {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                width: 100%;
+                background-color: var(--off-white);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .height-wrapper {
+                display: flex;
+                flex-direction: row;
+                flex: 0.75;
+                justify-content: center;
+            }
+            .width-wrapper {
+                display: flex;
+                flex-direction: row;
+                flex: 0.75;
+                justify-content: center;
+            }
+            .main-card {
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+                box-sizing: border-box;
+                margin: 10px;
+                padding: 10px;
+            }
+            .neu-card {
+                background-color: var(--off-white);
+                box-shadow: -10px -10px 24px 0 rgba(255, 255, 255, 0.63), 8px 8px 18px 0 rgba(217, 210, 200, 0.86); 
+                border-radius: 24px;
+            }
+            .content-height {
+                display: flex;
+                flex-direction: row;
+                flex: 1;
+                align-content: flex-end;
+            }
+            .content-width {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+            }
+            .check-container {
+                display: block; 
+                position: relative;
+                padding-left: 35px;
+                margin-bottom: 12px;
+                cursor: pointer;
+                font-size: 22px;
+            }
+            .check-container input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+            }
+            .neu-check {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 25px;
+                width: 25px;
+                background-color: transparent;
+                border: 1px solid rgba(255, 255, 255, 0.025);
+                box-shadow: -1px -1px 4px 0 rgba(255, 255, 255, 0.93), 2.5px 2.5px 3px 0 rgba(217, 210, 200, 0.71);  
+                border-radius: 5%;
+            }
+            .check-container:hover input ~ .neu-check {
+                box-shadow: -1.5px -1.5px 3px 0 rgba(217, 210, 200, 0.71), 1px 1px 4px 0  rgba(255, 255, 255, 0.93);
+                transition-duration: 500ms;
+            }
+            .check-container input:checked ~ .neu-check {
+                box-shadow: 1.5px 2px 4px 0 rgba(255, 255, 255, 0.43), 1px 1px 4px 0 rgba(255, 255, 255, 0.13),  inset 1px 0.5px 7px 0 rgba(217, 210, 200, 0.71), inset -1px -1px 2px rgba(255, 255, 255, 0.85);
+                transition-duration: 100ms;
+            }
+            .neu-check:after {
+                content: "";
+                position: absolute;
+                display: none; 
+            }
+            .check-container input:checked ~ .neu-check:after {
+                display: block;
+            }
+            .check-container .neu-check:after {
+                left: 6.5px;
+                bottom: 5.5px;
+                background-color: var(--off-white);
+                height: 13px;
+                width: 13px;
+                box-shadow: 1.5px 1.5px 2px 0 rgba(255, 255, 255, 0.13), -1.5px -1.5px 2px 0 rgba(255, 255, 255, 0.63);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="height-wrapper">
+            <div class="width-wrapper">
+                <div class="neu-card main-card">
+                    <label>
+                        Which of the following drawbacks applies to the design on this form?<span style="font-size: 13px;">(Check all that apply)</span>
+                        <label class="check-container">
+                            <input type="checkbox" name="check">
+                            <span class="neu-check"></span>
+                            Not enough color variation in the design
+                        </label>
+                        <label class="check-container">
+                            <input type="checkbox" name="check">
+                            <span class="neu-check"></span>
+                            Inacessible to color blind or visually impaired users
+                        </label>
+                        <label class="check-container">
+                            <input type="checkbox" name="check">
+                            <span class="neu-check"></span>
+                            Interactive elements are difficult to differentiate and discern in their various states (inactive, hover and active/focus)
+                        </label>
+                        <label class="check-container">
+                            <input type="checkbox" name="check">
+                            <span class="neu-check"></span>
+                            Design template is too specific for any kind of branding
+                        </label>  
+                        <label class="check-container">
+                            <input type="checkbox" name="check">
+                            <span class="neu-check"></span>
+                            Element shading and lighting takes up too much design space
+                        </label>
+                        <label class="check-container">
+                            <input type="checkbox" name="check">
+                            <span class="neu-check"></span>
+                            Minimalist design limits how much content can be placed on the webpage
+                        </label>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
